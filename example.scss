@@ -1,0 +1,73 @@
+/*
+"""title
+Buttons
+""" 
+
+"""overview
+This page descibes the existing button variations
+"""
+*/
+
+.button {
+    /*
+    """example
+    <button class="button"></button>
+    """ 
+
+    """html
+    <div class="clearfix">
+    <button class="button"></button>
+    </div>
+    """ 
+    */
+    font-weight: 400;
+    padding: 2em;
+
+     /*
+    """description 
+    We support the following variations
+    """ 
+
+    """example
+    <button class="button button__primary"></button>
+    """ 
+
+    """html
+    <div class="clearfix">
+    <button class="button button__primary"></button>
+    </div>
+    """ 
+    */
+    &__primary {
+        color: red;
+    }
+
+    /*
+    """example
+    <button class="button __secondary"></button>
+    """
+
+    """html
+    <div class="clearfix">
+    <button class="button __secondary"></button>
+    </div>
+    """
+    */
+    &__secondary {
+        color: green;
+    }
+
+   /*
+
+    """description special case"""
+    """example  <button class="button __success"></button> """
+    """html 
+        <div class="clearfix">
+            <button class="button __success"></button>
+        </div>
+    """
+    */
+    &__success {
+        color:cyan;
+    }
+}
