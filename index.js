@@ -7,8 +7,8 @@ const articles = [];
 main(process.argv);
 
 function main(argv) {
-    console.log(argv);
     let path = argv[2]
+    console.log("DIRECTORY TO LOOK FOR FILES: " + path);
     let filesUrls = getFilesFromDirectory(path);
     let articles = extractArticlesFromFiles(filesUrls);
     let snippets = renderArticlesToHtml(articles);
@@ -47,6 +47,28 @@ function extractArticlesFromFiles(filesUrls) {
     return articles;
 }
 
-function renderArticlesToHtml() { }
+function renderArticlesToHtml() {
+    console.log("START TO RENDER ARTICLES");
+    console.log("---------------------");
+    articles.map((article) => {
+        console.log("RENDER ARTICLE: " + article.title);
+        let title = "<h1>" + article.title + "</h1>";
+        let overview = "<p>" + article.overview + "</p>";
+        let artA = "<article>" + title + overview;
+        article.sections.map((section) => {
+            let sec = "<section><div>";
+            let example = section[0].example;
+            let description = "<p>" + section[0].description + "</p>";
+            let html = section[0].html;
+
+            sec = sec + example + description + html;
+            sec = sec + "</div></section>";
+            artA = artA + sec;
+        })
+        artA = artA + "</article>";
+        console.log("---------------------");
+        console.log(artA);
+    })
+}
 
 function writeIndexHtml() { }
