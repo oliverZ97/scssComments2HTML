@@ -2,6 +2,7 @@ const FileLoader = require("./lib/FileLoader.js");
 const loader = new FileLoader();
 const fs = require("fs");
 const path = require("path");
+const articles = [];
 
 main(process.argv);
 
@@ -34,17 +35,15 @@ function getFilesFromDirectory(directory) {
 
 function extractArticlesFromFiles(filesUrls) {
 
-    let articles = [];
     filesUrls.forEach((fileUrl) => {
         let article = loader.readFileFromURL(fileUrl);
         articles.push(article);
-        console.log("---------------------");
-        console.log("ARTICLES:");
-        console.log("---------------------");
-        console.log(articles);
-        console.log("---------------------");
     });
-
+    console.log("---------------------");
+    console.log("ARTICLES:");
+    console.log("---------------------");
+    console.log(articles);
+    console.log("---------------------");
     return articles;
 }
 
