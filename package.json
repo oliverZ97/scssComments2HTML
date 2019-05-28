@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/oliverZ97/scssComments2HTML/issues"
   },
-  "homepage": "https://github.com/oliverZ97/scssComments2HTML#readme"
+  "homepage": "https://github.com/oliverZ97/scssComments2HTML#readme",
+  "dependencies": {
+    "js-yaml": "^3.13.1"
+  }
 }

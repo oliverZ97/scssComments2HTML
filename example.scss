@@ -8,17 +8,44 @@ This page descibes the existing button variations
 """
 */
 
+
+/*
+---
+
+example: >
+    <button>
+    hi
+    </button>
+
+description:  So amazing
+
+html: >
+    <div>
+        <button></button>
+    </div>
+
+---
+
+=> {
+    example: "...",
+    description: "...",
+    html: "..."
+}
+
+*/
+
 .button {
     /*
-    """example
+    ---
+    example:
     <button class="button"></button>
-    """ 
+    
 
-    """html
+    html: >
     <div class="clearfix">
     <button class="button"></button>
     </div>
-    """ 
+    
     */
     font-weight: 400;
     padding: 2em;
