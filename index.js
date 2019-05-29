@@ -24,13 +24,13 @@ function getFilesFromDirectory(directory) {
     let scssFiles = [];
     console.log("---------------------");
     console.log("FILES FOUND:");
+    console.log("---------------------");
     fs.readdirSync(directory, "utf8").forEach(file => {
         if (path.extname(file) === ".scss") {
             console.log(file);
             scssFiles.push(file);
         }
     });
-    console.log("---------------------");
     console.log("---------------------");
 
     return scssFiles;
@@ -42,7 +42,6 @@ function extractArticlesFromFiles(filesUrls) {
         let article = loader.readFileFromURL(fileUrl);
         articles.push(article);
     });
-    console.log("---------------------");
     console.log("ARTICLES:");
     console.log("---------------------");
     console.log(articles);
@@ -63,7 +62,11 @@ function renderArticlesToHtml() {
             let sec = "<section><div>\n";
             let example = section[0].example;
             let description = "<p>" + section[0].description + "</p>\n";
-            let html = "<figure>\n<pre>\n<code>\n" + section[0].html + "</code>\n</pre>\n</figure>\n";
+            let maskLT = section[0].html.replace(/</g, '&lt;');
+            let maskGT = maskLT.replace(/>/g, '&gt;');
+            maskHTML  = maskGT;
+                
+            let html = "<figure>\n<pre>\n<code>\n" + maskHTML + "</code>\n</pre>\n</figure>\n";
 
             sec = sec + example + description + html;
             sec = sec + "</div></section>";
