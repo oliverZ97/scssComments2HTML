@@ -85,10 +85,17 @@ function fillTemplateWithHTML(directory, snippets) {
         }
     });
     let fileContent = fs.readFileSync(htmlTemplate, 'utf8');
-    console.log("Template: " + fileContent);
-    let filledTemplate = fileContent.replace("SNIPPET_PLACEHOLDER", snippets);
+    let filledTemplateWithSnippets = fileContent.replace("SNIPPET_PLACEHOLDER", snippets);
 
-    return filledTemplate;
+    let navString = "";
+    let titles = articles.forEach(article => { 
+        navString = navString + "<li><a>" + article.title + "</a></li>\n";
+        console.log(navString);
+    });
+        
+    let filledTemplateWithNav = filledTemplateWithSnippets.replace("NAV_PLACEHOLDER", navString);
+
+    return filledTemplateWithNav;
 }
 
 function writeIndexHtml(htmlContent) { 
