@@ -12,8 +12,9 @@ function main(argv) {
     let filesUrls = getFilesFromDirectory(path);
     let articles = extractArticlesFromFiles(filesUrls);
     let snippets = renderArticlesToHtml(articles);
+    let template = fillTemplateWithHTML(path, snippets);
 
-    writeIndexHtml(snippets);
+    writeIndexHtml(template);
 }
 
 function getFilesFromDirectory(directory) {
@@ -48,13 +49,14 @@ function extractArticlesFromFiles(filesUrls) {
 }
 
 function renderArticlesToHtml() {
+    let articlesAsString = "<div>";
     console.log("START TO RENDER ARTICLES");
     console.log("---------------------");
     articles.map((article) => {
         console.log("RENDER ARTICLE: " + article.title);
         let title = "<h1>" + article.title + "</h1>";
         let overview = "<p>" + article.overview + "</p>";
-        let artA = "<article>" + title + overview;
+        let artHTMLString = "<article>" + title + overview;
         article.sections.map((section) => {
             let sec = "<section><div>";
             let example = section[0].example;
@@ -63,12 +65,33 @@ function renderArticlesToHtml() {
 
             sec = sec + example + description + html;
             sec = sec + "</div></section>";
-            artA = artA + sec;
+            artHTMLString = artHTMLString + sec;
         })
-        artA = artA + "</article>";
+        artHTMLString = artHTMLString + "</article>";
         console.log("---------------------");
-        console.log(artA);
+        console.log(artHTMLString);
+        console.log("---------------------");
+        articlesAsString = articlesAsString + artHTMLString;
     })
+    articlesAsString = articlesAsString + "</div>";
+    return articlesAsString;
 }
 
-function writeIndexHtml() { }
+function fillTemplateWithHTML(directory, snippets) {
+    let htmlTemplate = null;
+    fs.readdirSync(directory, "utf8").forEach(file => {
+        if (path.basename(file) === "template.html") {
+            htmlTemplate = file;
+        }
+    });
+    let fileContent = fs.readFileSync(htmlTemplate, 'utf8');
+    console.log("Template: " + fileContent);
+    let filledTemplate = fileContent.replace("SNIPPET_PLACEHOLDER", snippets);
+
+    return filledTemplate;
+}
+
+function writeIndexHtml(htmlContent) { 
+    fs.writeFileSync('./index.html', htmlContent);
+    console.log("WRITE FILE index.html");
+}
