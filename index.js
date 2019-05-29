@@ -1,3 +1,4 @@
+const hljs = require("highlight.js");
 const FileLoader = require("./lib/FileLoader.js");
 const loader = new FileLoader();
 const fs = require("fs");
@@ -62,13 +63,10 @@ function renderArticlesToHtml() {
             let sec = "<section><div>\n";
             let example = section[0].example;
             let description = "<p>" + section[0].description + "</p>\n";
-            let maskLT = section[0].html.replace(/</g, '&lt;');
-            let maskGT = maskLT.replace(/>/g, '&gt;');
-            maskHTML  = maskGT;
-                
-            let html = "<figure>\n<pre>\n<code>\n" + maskHTML + "</code>\n</pre>\n</figure>\n";
+            let mask = hljs.highlight('javascript', section[0].html).value;
+            let html = "<figure>\n<pre>\n<code>\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-            sec = sec + example + description + html;
+            sec = sec + description + example + html;
             sec = sec + "</div></section>";
             artHTMLString = artHTMLString + sec;
         })
