@@ -4,6 +4,7 @@ const loader = new FileLoader();
 const fs = require("fs");
 const path = require("path");
 const articles = [];
+const root = "../scssComments2HTML";
 
 main(process.argv);
 
@@ -12,6 +13,7 @@ function main(argv) {
     console.log("---------------------");
     console.log("DIRECTORY TO LOOK FOR FILES: " + path);
     let filesUrls = getFilesFromDirectory(path);
+    console.log(filesUrls);
     let articles = extractArticlesFromFiles(filesUrls);
     let snippets = renderArticlesToHtml(articles);
     let template = fillTemplateWithHTML(path, snippets);
@@ -29,7 +31,7 @@ function getFilesFromDirectory(directory) {
     fs.readdirSync(directory, "utf8").forEach(file => {
         if (path.extname(file) === ".scss") {
             console.log(file);
-            scssFiles.push(file);
+            scssFiles.push(directory + "/"+ file);
         }
     });
     console.log("---------------------");
@@ -82,7 +84,7 @@ function fillTemplateWithHTML(directory, snippets) {
     console.log("FILL TEMPLATE WITH HTML");
     console.log("---------------------");
     let htmlTemplate = null;
-    fs.readdirSync(directory, "utf8").forEach(file => {
+    fs.readdirSync(root, "utf8").forEach(file => {
         if (path.basename(file) === "template.html") {
             htmlTemplate = file;
         }
