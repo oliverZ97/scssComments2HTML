@@ -54,7 +54,7 @@ function renderArticlesToHtml() {
     console.log("---------------------");
     articles.map((article) => {
         console.log("RENDER ARTICLE: " + article.title);
-        let title = "<h1>" + article.title + "</h1>";
+        let title = "<h1 id=\"" + article.title + "\">" + article.title + "</h1>";
         let overview = "<p>" + article.overview + "</p>";
         let artHTMLString = "<article>" + title + overview;
         article.sections.map((section) => {
@@ -89,8 +89,7 @@ function fillTemplateWithHTML(directory, snippets) {
 
     let navString = "";
     let titles = articles.forEach(article => { 
-        navString = navString + "<li><a>" + article.title + "</a></li>\n";
-        console.log(navString);
+        navString = navString + "<li><a href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
     });
         
     let filledTemplateWithNav = filledTemplateWithSnippets.replace("NAV_PLACEHOLDER", navString);
