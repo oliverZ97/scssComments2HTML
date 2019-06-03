@@ -58,21 +58,21 @@ function renderArticlesToHtml() {
     console.log("---------------------");
     articles.map((article) => {
         console.log("RENDER ARTICLE: " + article.title);
-        let title = "<h1 id=\"" + article.title + "\">" + article.title + "</h1>\n";
+        let title = "<h1 class=\"title\" id=\"" + article.title + "\">" + article.title + "</h1>\n";
         let overview = "<p>" + article.overview + "</p>\n";
-        let artHTMLString = "<article>" + title + overview;
+        let artHTMLString = "<article class=\"article\">" + "<div class=\"article__header\">" + title + overview + "</div>\n<div class=\"article__sections\">";
         article.sections.map((section) => {
-            let sec = "<section><div>\n";
+            let sec = "<section class=\"section\"><div>\n";
             let example = section[0].example;
             let description = "<p>" + section[0].description + "</p>\n";
             let mask = hljs.highlight('javascript', section[0].html).value;
             let html = "<figure>\n<pre>\n<code>\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-            sec = sec + description + example + html;
+            sec = sec + "<div class=\"description\">" + description + "</div>\n<div class=\"snippet\">" + "<div class=\"example\">" + example + "</div>\n<div class=\"snip\">" +html + "</div>\n</div>";
             sec = sec + "</div></section>";
             artHTMLString = artHTMLString + sec;
         })
-        artHTMLString = artHTMLString + "</article>";
+        artHTMLString = artHTMLString + "</div>\n</article>";
         articlesAsString = articlesAsString + artHTMLString;
     })
     console.log("---------------------");
@@ -94,7 +94,7 @@ function fillTemplateWithHTML(directory, snippets) {
 
     let navString = "";
     let titles = articles.forEach(article => { 
-        navString = navString + "<li><a href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
+        navString = navString + "<li class=\"nav__item\"><a class=\"link\" href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
     });
         
     let filledTemplateWithNav = filledTemplateWithSnippets.replace("NAV_PLACEHOLDER", navString);

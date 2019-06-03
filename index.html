@@ -4,30 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Team Enterprise Styleguide</title>
-    <link rel="stylesheet" href="CSS_PLACEHOLDER" type="text/css">
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 
-<body>
+<body class="body">
 
-    <!-- navbar -->
-    <nav>
-        <ul>
-            <li><a href="#Button">Button</a></li>
-<li><a href="#Buttons">Buttons</a></li>
-<li><a href="#BeispielA">BeispielA</a></li>
+    <header class="header">
+        <img src="logo.gif" width="40px" height="40px">
+    </header>
 
-        </ul>
-    </nav>
+    <div class="page">
+        <!-- navbar -->
+        <nav class="nav">
+            <div class="nav__header">
+                <p>Navigation</p>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="link" href="#Button">Button</a></li>
+<li class="nav__item"><a class="link" href="#Buttons">Buttons</a></li>
+<li class="nav__item"><a class="link" href="#BeispielA">BeispielA</a></li>
 
-    <!-- snippets -->
-    <div><article><h1 id="Button">Button</h1>
+            </ul>
+        </nav>
+
+        <!-- snippets -->
+        <div class="content">
+            <div><article class="article"><div class="article__header"><h1 class="title" id="Button">Button</h1>
 <p>This Page describes all existing Button Variations. Including: 
 Default Button | 
 Primary Button</p>
-<section><div>
-<p>Default Button</p>
-<button class="btn"> Default </button>
-<figure>
+</div>
+<div class="article__sections"><section class="section"><div>
+<div class="description"><p>Default Button</p>
+</div>
+<div class="snippet"><div class="example"><button class="btn"> Default </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -36,10 +48,13 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section><section><div>
-<p>Primary Button</p>
-<button class="btn btn__primary"> Primary </button>
-<figure>
+</div>
+</div></div></section><section class="section"><div>
+<div class="description"><p>Primary Button</p>
+</div>
+<div class="snippet"><div class="example"><button class="btn btn__primary"> Primary </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -48,12 +63,17 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section></article><article><h1 id="Buttons">Buttons</h1>
+</div>
+</div></div></section></div>
+</article><article class="article"><div class="article__header"><h1 class="title" id="Buttons">Buttons</h1>
 <p>This page descibes the existing button variations</p>
-<section><div>
-<p>So amazing</p>
-<button> hi </button>
-<figure>
+</div>
+<div class="article__sections"><section class="section"><div>
+<div class="description"><p>So amazing</p>
+</div>
+<div class="snippet"><div class="example"><button> hi </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -62,12 +82,17 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section></article><article><h1 id="BeispielA">BeispielA</h1>
+</div>
+</div></div></section></div>
+</article><article class="article"><div class="article__header"><h1 class="title" id="BeispielA">BeispielA</h1>
 <p>This page describes the existing button variations</p>
-<section><div>
-<p>So amazing</p>
-<button> hi </button>
-<figure>
+</div>
+<div class="article__sections"><section class="section"><div>
+<div class="description"><p>So amazing</p>
+</div>
+<div class="snippet"><div class="example"><button> hi </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -76,10 +101,13 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section><section><div>
-<p>So amazing</p>
-<button> hi </button>
-<figure>
+</div>
+</div></div></section><section class="section"><div>
+<div class="description"><p>So amazing</p>
+</div>
+<div class="snippet"><div class="example"><button> hi </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -88,10 +116,13 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section><section><div>
-<p>So amazing</p>
-<button> hi </button>
-<figure>
+</div>
+</div></div></section><section class="section"><div>
+<div class="description"><p>So amazing</p>
+</div>
+<div class="snippet"><div class="example"><button> hi </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -100,10 +131,13 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section><section><div>
-<p>So amazing</p>
-<button> hi </button>
-<figure>
+</div>
+</div></div></section><section class="section"><div>
+<div class="description"><p>So amazing</p>
+</div>
+<div class="snippet"><div class="example"><button> hi </button>
+</div>
+<div class="snip"><figure>
 <pre>
 <code>
 &lt;div&gt;
@@ -112,7 +146,11 @@ Primary Button</p>
 </code>
 </pre>
 </figure>
-</div></section></article></div>
+</div>
+</div></div></section></div>
+</article></div>
+        </div>
+    </div>
 
 </body>
 
