@@ -103,7 +103,7 @@ function fillTemplateWithHTML(directory, snippets) {
 }
 
 function writeIndexHtml(htmlContent) { 
-    fs.writeFileSync('./index.html', htmlContent);
+    fs.writeFileSync('./docs/index.html', htmlContent);
     console.log("WRITE FILE index.html");
     console.log("---------------------");
 }
