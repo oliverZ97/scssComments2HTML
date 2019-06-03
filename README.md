@@ -33,13 +33,11 @@ This page descibes the existing button variations
 description:  This is a Button.
 
 example: >
-    <button>
-    button
-    </button>
+    <button>button</button>
 
 html: >
     <div>
-        <button>button</button>
+        <button class="btn">button</button>
     </div>
 
 ---

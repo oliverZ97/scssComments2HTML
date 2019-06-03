@@ -69,7 +69,7 @@
 
 .article__header {
     padding: 10px;
-    background-color: #232323; 
+    background-color: #232323;
     color: #009993;
     border-bottom: 2px solid #009993;
 }
@@ -153,14 +153,17 @@
     background-color: #009993;
     color: #282828;
     opacity: 1;
+    transition-duration: .4s;
 }
 
 .article__header:hover {
     background-color: #009993;
     color: #232323;
     opacity: 1;
+    transition-duration: .4s;
 }
 
-.nav:hover > .nav__header{
+.nav:hover>.nav__header {
     opacity: 1;
+    transition-duration: .4s;
 }
