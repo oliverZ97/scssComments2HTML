@@ -189,3 +189,253 @@
 }
 
 
+
+
+/*Hero*/
+/*Headlines*/
+/*Text*/
+
+/*Hero*/
+/*Headlines*/
+/*Text*/
+
+
+
+/*
+"""title
+Button
+""" 
+
+"""overview
+This Page describes all existing Button Variations. Including: 
+Default Button | 
+Primary Button
+"""
+*/
+.btn {
+  /*
+---
+description:  Default Button
+example: >
+    <button class="btn">
+    Default
+    </button>
+
+html: >
+    <div>
+        <button class="btn"></button>
+    </div>
+---
+*/
+  background-color: #00ff00;
+  border-radius: 5px;
+  color: #0000ff;
+  /*
+---
+description:  Primary Button
+example: >
+    <button class="btn btn__primary">
+    Primary
+    </button>
+
+html: >
+    <div>
+        <button class="btn btn__primary"></button>
+    </div>
+---
+*/ }
+  .btn__primary {
+    width: 250px;
+    height: 50px;
+    margin-top: 1rem; }
+  .btn__primary:hover {
+    background-color: #ff0000;
+    color: #0000ff;
+    cursor: pointer; }
+  .btn__primary:focus {
+    outline: none; }
+
+/*
+"""title
+Buttons
+""" 
+
+"""overview
+This page descibes the existing button variations
+"""
+*/
+/*
+---
+
+example: >
+    <button>
+    hi
+    </button>
+
+description:  So amazing
+
+html: >
+    <div>
+        <button></button>
+    </div>
+    <div>
+        <button></button>
+    </div>
+    <div>
+        <button></button>
+    </div>
+    <div>
+        <button></button>
+    </div>
+
+---
+
+=> {
+    example: "...",
+    description: "...",
+    html: "..."
+}
+
+*/
+.button {
+  /*
+    ---
+    example:
+    <button class="button"></button>
+    
+
+    html: >
+    <div class="clearfix">
+    <button class="button"></button>
+    </div>
+    
+    */
+  font-weight: 400;
+  padding: 2em;
+  /*
+    """description 
+    We support the following variations
+    """ 
+
+    """example
+    <button class="button button__primary"></button>
+    """ 
+
+    """html
+    <div class="clearfix">
+    <button class="button button__primary"></button>
+    </div>
+    """ 
+    */
+  /*
+    """example
+    <button class="button __secondary"></button>
+    """
+
+    """html
+    <div class="clearfix">
+    <button class="button __secondary"></button>
+    </div>
+    """
+    */
+  /*
+
+    """description special case"""
+    """example  <button class="button __success"></button> """
+    """html 
+        <div class="clearfix">
+            <button class="button __success"></button>
+        </div>
+    """
+    */ }
+  .button__primary {
+    color: red; }
+  .button .test-shit {
+    background-color: yellow; }
+  .button__secondary {
+    color: green; }
+  .button__success {
+    color: cyan; }
+
+/*
+"""title
+BeispielA
+""" 
+
+"""title
+Besd
+""" 
+
+"""overview
+This page describes the existing button variations
+"""
+*/
+/*
+---
+description:  So amazing
+example: >
+    <button>
+    hi
+    </button>
+
+html: >
+    <div>
+        <button></button>
+    </div>
+...
+---
+*/
+/*
+---
+
+example: >
+    <button>
+    hi
+    </button>
+
+description:  So amazing
+
+html: >
+    <div>
+        <button></button>
+    </div>
+...
+---
+
+*/
+/*
+---
+
+example: >
+    <button>
+    hi
+    </button>
+
+description:  So amazing
+
+html: >
+    <div>
+        <button></button>
+    </div>
+...
+---
+
+*/
+/*
+---
+
+example: >
+    <button>
+    hi
+    </button>
+
+description:  So amazing
+
+html: >
+    <div>
+        <button></button>
+    </div>
+...
+---
+*/
+

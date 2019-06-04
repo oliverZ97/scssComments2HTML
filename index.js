@@ -5,7 +5,6 @@ const fs = require("fs");
 const path = require("path");
 const articles = [];
 const root = "../scssComments2HTML";
-import "./docs/index.css";
 
 main(process.argv);
 
@@ -14,11 +13,12 @@ function main(argv) {
     console.log("---------------------");
     console.log("DIRECTORY TO LOOK FOR FILES: " + path);
     let filesUrls = getFilesFromDirectory(path);
-    console.log(filesUrls);
     let articles = extractArticlesFromFiles(filesUrls);
     let snippets = renderArticlesToHtml(articles);
     let template = fillTemplateWithHTML(path, snippets);
+    let importCSS = createSCSSImportFileContent(path);
 
+    writeSCSSFile(importCSS);
     writeIndexHtml(template);
     console.log("FINISHED! HAVE FUN WITH YOUR STYLEGUIDE :D");
     console.log("---------------------");
@@ -38,6 +38,17 @@ function getFilesFromDirectory(directory) {
     console.log("---------------------");
 
     return scssFiles;
+}
+
+function createSCSSImportFileContent(directory) {
+    let string = "import \'../docs/index.css\';\n";
+    fs.readdirSync(directory, "utf8").forEach(file => {
+        if (path.extname(file) === ".scss") {
+            string = string + "import \'." + directory + "/" + file + "\';\n";
+        }
+    });
+
+    return string;
 }
 
 function extractArticlesFromFiles(filesUrls) {
@@ -106,5 +117,11 @@ function fillTemplateWithHTML(directory, snippets) {
 function writeIndexHtml(htmlContent) { 
     fs.writeFileSync('./docs/index.html', htmlContent);
     console.log("WRITE FILE index.html");
+    console.log("---------------------");
+}
+
+function writeSCSSFile(scssContent) {
+    fs.writeFileSync('./docs/style.js', scssContent);
+    console.log("WRITE FILE style.js");
     console.log("---------------------");
 }

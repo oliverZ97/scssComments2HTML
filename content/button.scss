@@ -9,7 +9,7 @@ Default Button |
 Primary Button
 """
 */
-@import "../colors";
+@import "colors";
 
 .btn {
 /*
@@ -50,8 +50,8 @@ html: >
   }
 
   &__primary:hover {
-    background-color: $button-col-bg;
-    color: $text-color;
+    background-color: $secondary-color;
+    color: $primary-color;
     cursor: pointer;
   }
 
