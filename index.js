@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const articles = [];
 const root = "../scssComments2HTML";
+import "./docs/index.css";
 
 main(process.argv);
 
