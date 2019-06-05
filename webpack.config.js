@@ -7,9 +7,9 @@ const webpack = require('webpack');
 console.log('im running in DevMode: ' + devMode);
 
 module.exports = {
-    entry: './docs/style.js',
+    entry: './res/style.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: 'index_bundle.js',
         publicPath: '/'
     },
@@ -67,7 +67,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./docs/index.html",
+            template: "./res/index.html",
             filename: "./index.html"
         }),
         new MiniCssExtractPlugin({

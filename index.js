@@ -41,7 +41,7 @@ function getFilesFromDirectory(directory) {
 }
 
 function createSCSSImportFileContent(directory) {
-    let string = "import \'../docs/index.css\';\n";
+    let string = "import \'../res/index.css\';\n";
     fs.readdirSync(directory, "utf8").forEach(file => {
         if (path.extname(file) === ".scss") {
             string = string + "import \'." + directory + "/" + file + "\';\n";
@@ -115,13 +115,13 @@ function fillTemplateWithHTML(directory, snippets) {
 }
 
 function writeIndexHtml(htmlContent) { 
-    fs.writeFileSync('./docs/index.html', htmlContent);
+    fs.writeFileSync('./res/index.html', htmlContent);
     console.log("WRITE FILE index.html");
     console.log("---------------------");
 }
 
 function writeSCSSFile(scssContent) {
-    fs.writeFileSync('./docs/style.js', scssContent);
+    fs.writeFileSync('./res/style.js', scssContent);
     console.log("WRITE FILE style.js");
     console.log("---------------------");
 }
