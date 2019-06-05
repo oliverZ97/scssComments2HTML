@@ -4,6 +4,7 @@ import '../content/_colors.scss';
 import '../content/_configuration.scss';
 import '../content/_font.scss';
 import '../content/_mediaQueries.scss';
+import '../content/_pill.scss';
 import '../content/_spacing.scss';
 import '../content/button.scss';
 import '../content/example.scss';

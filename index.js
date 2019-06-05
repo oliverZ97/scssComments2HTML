@@ -68,7 +68,8 @@ function renderArticlesToHtml() {
     let articlesAsString = "<div>";
     console.log("START TO RENDER ARTICLES");
     console.log("---------------------");
-    articles.map((article) => {
+    let filterArticles = articles.filter((article => article.title !== "Undefined"));
+    filterArticles.map((article) => {
         console.log("RENDER ARTICLE: " + article.title);
         let title = "<h1 class=\"title\" id=\"" + article.title + "\">" + article.title + "</h1>\n";
         let overview = "<p>" + article.overview + "</p>\n";
@@ -105,7 +106,8 @@ function fillTemplateWithHTML(directory, snippets) {
     let filledTemplateWithSnippets = fileContent.replace("SNIPPET_PLACEHOLDER", snippets);
 
     let navString = "";
-    let titles = articles.forEach(article => { 
+    let filterArticles = articles.filter((article => article.title !== "Undefined"));
+    let titles = filterArticles.forEach(article => { 
         navString = navString + "<li class=\"nav__item\"><a class=\"link\" href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
     });
         

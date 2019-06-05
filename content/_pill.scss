@@ -1,0 +1,133 @@
+/*
+"""title
+Pill
+"""
+
+"""overview
+This Article contains the Styles of different kinds of Pills
+"""
+*/
+@import "./colors";
+
+$pill-margin: 2px;
+$pill-diameter-primary: 50px;
+$pill-diameter-secondary: 40px;
+$pill-diameter-icon: 40px;
+
+.pill {
+  background-color: $pill-col-bg;
+  border: 1px solid $pill-col-border;
+
+  /*
+---
+description:  Primary Pill
+example: >
+    <button class="pill__primary"></button>
+
+html: >
+        <button class="pill__primary"></button>
+---
+*/
+  &__primary {
+    @extend .pill;
+    width: $pill-diameter-primary;
+    height: $pill-diameter-primary;
+    border-radius: $pill-diameter-primary;
+    margin: $pill-margin;
+  }
+
+  &__primary:hover {
+    background-color: $interaction-color;
+    cursor: pointer;
+  }
+
+  /*
+---
+description:  Secondary Pill
+example: >
+    <button class="pill__secondary"></button>
+
+html: >
+        <button class="pill__secondary"></button>
+---
+*/
+  &__secondary {
+    @extend .pill;
+    width: $pill-diameter-secondary;
+    height: $pill-diameter-secondary;
+    border-radius: $pill-diameter-secondary;
+    margin: $pill-margin;
+  }
+
+  &__secondary:hover {
+    background-color: $interaction-color;
+    cursor: pointer;
+  }
+
+  /*
+---
+description:  Icon Pill 
+example: >
+    <button class="pill__primary pill--favorite-l"></button>
+    <button class="pill__secondary pill--favorite"></button>
+
+html: >
+        <button class="pill__primary pill--favorite-l"></button>
+        <button class="pill__secondary pill--favorite"></button>
+---
+*/
+  &--favorite {
+    background: $pill-col-bg url("./assets/noun_Star_750828.png");
+    background-size: 40px 40px;
+  }
+
+  &--favorite-l {
+    background: $pill-col-bg url("./assets/noun_Star_750828.png") no-repeat center;
+    background-size: 50px 50px;
+  }
+
+  &--searches {
+    background: $pill-col-bg url("./assets/noun_diskette_1939628.png");
+    background-size: 40px 40px;
+  }
+
+  &--logout {
+    background: $pill-col-bg url("./assets/noun_logout_1350695.png");
+    background-size: 40px 40px;
+  }
+
+  &--displayTile {
+    background: $pill-col-bg url("./assets/noun_tiles_777826.png") no-repeat center;
+    background-size: 40px 40px;
+  }
+
+  &--displayList {
+    background: $pill-col-bg url("./assets/noun_List_433943.png") no-repeat center;
+    background-size: 40px 40px;
+  }
+
+  &--back {
+    background: $pill-col-bg url("./assets/noun_Arrow_8603.png") no-repeat center;
+    background-size: 40px 40px;
+  }
+
+  &--delete {
+    background: $pill-col-bg url("./assets/noun_abort_1258168.png") no-repeat center;
+    background-size: 50px 50px;
+  }
+
+  &--filter {
+    background: $pill-col-bg url("./assets/noun_filters_220951.png");
+    background-size: 50px 50px;
+  }
+
+  &--update {
+    background: $pill-col-bg url("./assets/noun_checkmark_67952.png");
+    background-size: 50px 50px;
+  }
+
+  &--save {
+    background: $pill-col-bg url("./assets/noun_diskette_1939628.png");
+    background-size: 50px 50px;
+  }
+}

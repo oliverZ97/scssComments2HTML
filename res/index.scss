@@ -115,6 +115,8 @@ $text-color-light: #cccccc;
     color: $tertiary-color;
     opacity: 1;
     transition-duration: 0.4s;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 }
 
@@ -148,7 +150,9 @@ $text-color-light: #cccccc;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   min-height: 100px;
+  height: 100%;
   color: $text-color-light;
   background-color: $tertiary-color;
   border-top: 1px solid $secondary-color;
@@ -158,14 +162,17 @@ $text-color-light: #cccccc;
 
 .example {
   width: 30%;
-  border-right: 1px solid $secondary-color;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
 .snip {
   width: 70%;
+  height: 100%;
+  border-left: 1px solid $secondary-color;
+  overflow: scroll;
 }
 
 .link {
@@ -191,4 +198,25 @@ $text-color-light: #cccccc;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
+}
+
+@media screen and (min-width: 1408px) {
+    .page {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .body {
+        font-size: 18px;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
+    .nav {
+        max-height: 1000px;
+        overflow-y: scroll;
+    }
 }

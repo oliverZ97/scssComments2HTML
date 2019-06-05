@@ -11,3 +11,136 @@ $pill-col-border: $primary-color;
 $tile-col-bg: $primary-color;
 
 $bar-col-bg: $tertiary-color;
+
+/*
+"""title
+Color Palette
+"""
+
+"""overview
+This Article shows the different colors used in the Styleguide
+"""
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 150px;
+  height: 50px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  background-color: #232323;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.color-primary {
+  /*
+    ---
+    description: Primary Color
+    example: >
+        <div class="container color-primary">
+            <div class="label">
+                <p>#0000ff</p>
+            </div>
+        </div>
+
+    html: >
+        $primary-color
+    ---
+
+    */
+
+  background-color: $primary-color;
+  color: #cccccc;
+}
+
+.color-secondary {
+    /*
+    ---
+    description: Secondary Color
+    example: >
+        <div class="container color-secondary">
+            <div class="label">
+                <p>#ff0000</p>
+            </div>
+        </div>
+
+    html: >
+        $secondary-color
+    ---
+
+    */
+    background-color: $secondary-color;
+    color: #cccccc;
+}
+
+.color-tertiary {
+    /*
+    ---
+    description: Tertiary Color
+    example: >
+        <div class="container color-tertiary">
+            <div class="label">
+                <p>#00ff00</p>
+            </div>
+        </div>
+
+    html: >
+        $tertiary-color
+    ---
+
+    */
+    background-color: $tertiary-color;
+    color: #cccccc;
+}
+
+.color-interaction {
+/*
+    ---
+    description: Interaction Color
+    example: >
+        <div class="container color-interaction">
+            <div class="label">
+                <p>#ffff00</p>
+            </div>
+        </div>
+
+    html: >
+        $interaction-color
+    ---
+
+    */
+
+    background-color: $interaction-color;
+    color: #cccccc;
+}
+
+.color-input {
+/*
+    ---
+    description: Input Color
+    example: >
+        <div class="container color-input">
+            <div class="label">
+                <p>#ffffff</p>
+            </div>
+        </div>
+
+    html: >
+        $input-color
+    ---
+
+    */
+
+    background-color: $input-color;
+    color: #cccccc;
+}
