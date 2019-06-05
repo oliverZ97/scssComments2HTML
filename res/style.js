@@ -1,4 +1,4 @@
-import '../res/index.css';
+import '../res/index.scss';
 import '../content/_borders.scss';
 import '../content/_colors.scss';
 import '../content/_configuration.scss';
