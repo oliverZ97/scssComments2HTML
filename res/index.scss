@@ -4,7 +4,7 @@ $secondary-color: #009993;
 $tertiary-color: #232323;
 $text-color-light: #cccccc;
 
-.body {
+.lsg_body {
   background-color: $bg-color;
   color: $text-color-light;
   font-family: Arial, Helvetica, sans-serif;
@@ -12,14 +12,14 @@ $text-color-light: #cccccc;
   width: 100%;
 }
 
-.page {
+.lsg_page {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
 }
 
-.header {
+.lsg_header {
   display: flex;
   justify-content: flex-start;
   padding: 10px;
@@ -28,7 +28,7 @@ $text-color-light: #cccccc;
   border-top: 2px solid $secondary-color;
 }
 
-.headline {
+.lsg_headline {
   margin-block-end: 0;
   margin-block-start: 0;
   margin-top: auto;
@@ -37,7 +37,7 @@ $text-color-light: #cccccc;
   color: $secondary-color;
 }
 
-.nav {
+.lsg_nav {
   width: 20%;
   display: flex;
   flex-direction: column;
@@ -76,13 +76,13 @@ $text-color-light: #cccccc;
   }
 }
 
-.content {
+.lsg_content {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.article {
+.lsg_article {
   border: 2px solid $secondary-color;
   border-radius: 5px;
   margin-bottom: 50px;
@@ -120,13 +120,13 @@ $text-color-light: #cccccc;
   }
 }
 
-.section {
+.lsg_section {
   padding-left: auto;
   padding-right: auto;
   margin-top: 30px;
   border: 1px solid $secondary-color;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   opacity: 0.6;
 
   &:hover {
@@ -137,16 +137,16 @@ $text-color-light: #cccccc;
   }
 }
 
-.title {
+.lsg_title {
   margin-block-end: 0;
   margin-block-start: 0;
 }
 
-.description {
+.lsg_description {
   padding-left: 10px;
 }
 
-.snippet {
+.lsg_snippet {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -160,22 +160,22 @@ $text-color-light: #cccccc;
   border-bottom-right-radius: 5px;
 }
 
-.example {
-  width: 30%;
+.lsg_example {
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: stretch;
   justify-content: center;
 }
 
-.snip {
-  width: 70%;
+.lsg_snip {
+  width: 50%;
   height: 100%;
   border-left: 1px solid $secondary-color;
   overflow: scroll;
 }
 
-.link {
+.lsg_link {
   display: block;
   color: $text-color-light;
   font-size: 16px;
@@ -201,21 +201,21 @@ $text-color-light: #cccccc;
 }
 
 @media screen and (min-width: 1408px) {
-    .page {
+    .lsg_page {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .body {
+    .lsg_body {
+        font-size: 16px;
+    }
+
+    .lsg_link {
         font-size: 18px;
     }
 
-    .link {
-        font-size: 18px;
-    }
-
-    .nav {
+    .lsg_nav {
         max-height: 1000px;
         overflow-y: scroll;
     }

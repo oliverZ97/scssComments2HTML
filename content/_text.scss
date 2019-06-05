@@ -1,0 +1,86 @@
+@import './colors';
+@import './font';
+/*
+"""title
+Text
+"""
+
+"""overview
+This Article shows the different types of text
+"""
+*/
+.light-container {
+    background-color: #cccccc;
+    border-radius: 5px;
+    max-height: 90%;
+}
+
+
+.text {
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+/*
+    ---
+    description: Primary Text Light
+    example: >
+        <div class="">
+            <p class="text__primary text--light">This Text is a primary Text.</p>
+        </div>
+
+    html: >
+            <p class="text__primary text--light"></p>
+    ---
+
+    */
+
+    &__primary {
+        @extend .text;
+        font-size: $text-primary;
+    }
+
+    /*
+    ---
+    description: Secondary Text Light
+    example: >
+        <div class="">
+            <p class="text__secondary text--light">This Text is a secondary Text.</p>
+        </div>
+
+    html: >
+            <p class="text__secondary text--light"></p>
+    ---
+
+    */
+    
+    &__secondary {
+        @extend .text;
+        font-size: $text-secondary;
+    }
+
+    /*
+    ---
+    description: Special Text Light
+    example: >
+        <div class="">
+            <p class="text__special text--light">This Text is a special Text.</p>
+        </div>
+
+    html: >
+            <p class="text__special text--light"></p>
+    ---
+
+    */
+
+    &__special {
+        @extend .text;
+        font-size: $text-special;
+        font-weight: bold;
+    }
+    
+    &--light {
+        @extend .text;
+        color: $text-color;
+    }
+}

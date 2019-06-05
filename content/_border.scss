@@ -1,0 +1,13 @@
+@import './colors';
+
+.border--dark {
+    border: 1px solid $primary-color;
+}
+
+.border--light {
+    border: 1px solid $secondary-color;
+}
+
+.border--round {
+    border-radius: 5px;
+}

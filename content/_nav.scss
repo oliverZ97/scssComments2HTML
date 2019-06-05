@@ -1,0 +1,29 @@
+@import './mediaQueries';
+@import './spacing';
+@import './colors';
+
+.nav {
+    background-color: $tertiary-color;
+    border-bottom: $interaction-color;
+    width: $width-primary;
+}
+
+@media screen and (max-width: $mq-mobile){
+    .nav__content {
+        width: $width-primary;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: $mq-tablet){
+    .nav__content {
+        width: $width-secondary;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: $mq-widescreen){
+    .nav__content {
+        width: $width-tertiary;
+    }
+}

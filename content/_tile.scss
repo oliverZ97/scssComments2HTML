@@ -1,0 +1,65 @@
+@import './configuration';
+
+.tile {
+    border: 2px solid $secondary-color;
+    border-radius: $br-primary;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    margin: 5px;
+
+    &__meta {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondary-color;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        line-height: 20px;
+        background-color: $quaternary-color;
+        padding: $padding-primary;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $padding-primary;
+    }
+    
+    &__text {
+        font-family: $font-primary;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: $text-primary;
+        flex: 2;
+        margin-top: 3px;
+    }
+
+    &__text--hiddenoverflow {
+        overflow: hidden;
+    }
+}
+
+.tile:hover {
+    border: 2px solid $quaternary-color;
+}
+
+@media screen and (max-width: $mq-mobile) {
+    .tile {
+        height: 150px;
+        width: 320px;
+
+        &__headline {
+            font-size: $headline-tertiary;
+        }
+    }
+}
+
+@media screen and (min-width: $mq-tablet) {
+    .tile__headline {
+        font-size: $headline-tertiary;
+    }
+}

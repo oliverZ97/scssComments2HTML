@@ -71,17 +71,17 @@ function renderArticlesToHtml() {
     let filterArticles = articles.filter((article => article.title !== "Undefined"));
     filterArticles.map((article) => {
         console.log("RENDER ARTICLE: " + article.title);
-        let title = "<h1 class=\"title\" id=\"" + article.title + "\">" + article.title + "</h1>\n";
+        let title = "<h1 class=\"lsg_title\" id=\"" + article.title + "\">" + article.title + "</h1>\n";
         let overview = "<p>" + article.overview + "</p>\n";
-        let artHTMLString = "<article class=\"article\">" + "<div class=\"article__header\">" + title + overview + "</div>\n<div class=\"article__sections\">";
+        let artHTMLString = "<article class=\"lsg_article\">" + "<div class=\"lsg_article__header\">" + title + overview + "</div>\n<div class=\"lsg_article__sections\">";
         article.sections.map((section) => {
-            let sec = "<section class=\"section\"><div>\n";
+            let sec = "<section class=\"lsg_section\"><div>\n";
             let example = section[0].example;
             let description = "<p>" + section[0].description + "</p>\n";
             let mask = hljs.highlight('javascript', section[0].html).value;
             let html = "<figure>\n<pre>\n<code>\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-            sec = sec + "<div class=\"description\">" + description + "</div>\n<div class=\"snippet\">" + "<div class=\"example\">" + example + "</div>\n<div class=\"snip\">" +html + "</div>\n</div>";
+            sec = sec + "<div class=\"lsg_description\">" + description + "</div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" +html + "</div>\n</div>";
             sec = sec + "</div></section>";
             artHTMLString = artHTMLString + sec;
         })
@@ -108,7 +108,7 @@ function fillTemplateWithHTML(directory, snippets) {
     let navString = "";
     let filterArticles = articles.filter((article => article.title !== "Undefined"));
     let titles = filterArticles.forEach(article => { 
-        navString = navString + "<li class=\"nav__item\"><a class=\"link\" href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
+        navString = navString + "<li class=\"lsg_nav__item\"><a class=\"lsg_link\" href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
     });
         
     let filledTemplateWithNav = filledTemplateWithSnippets.replace("NAV_PLACEHOLDER", navString);

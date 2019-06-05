@@ -1,0 +1,89 @@
+@import './colors';
+@import './font';
+@import './mediaQueries';
+
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; /**alignment along the MAIN-AXIS(column)**/
+
+    &__input {
+        width: 240px;
+        min-width: 15rem;
+        min-height: 30px;
+        margin-bottom: 200px;
+        padding: 10px;
+        font-size: $text-secondary;
+        color: $text-color;
+        flex: 1;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: $input-color;
+    }
+
+    &__input:hover {
+        border: 2px solid $quaternary-color;
+    }
+    
+    &__input--round {
+        @extend .form__input;
+        flex: none;
+        max-width: 240px;
+        border: 2px solid $primary-color;
+        border-radius: 50px;
+        background-color: $input-color;
+    }
+    
+    &__input:focus {
+        @extend .form__input;
+        color: $text-color;
+    }
+      
+    &__button {
+        flex: 1;
+        background-color: $tertiary-color;
+        color: $primary-color;
+        font-size: 20px;
+        transition: .6s;
+        overflow: hidden;
+    }
+    
+    &__button:hover {
+        background-color: $button-col-bg;
+        color: $text-color;
+        cursor: pointer;
+    }
+    
+    &__button:focus {
+        outline: none;
+    }
+    
+    &__message {
+        color: $text-color;
+    }
+}
+
+
+
+@media screen and (max-width: $mq-mobile) {
+    .Form {
+        justify-content: left;
+        min-width: 260px;
+        min-height: 1000px;
+
+        &__input {
+            width: 15rem;
+            height: 30px;
+        }
+    
+        &__input--round {
+            min-width: 10rem;
+        }
+    
+        &__button {
+            height: 50px;
+        }
+    }
+}

@@ -1,13 +1,14 @@
 $primary-color: #0000ff !default;
 $secondary-color: #ff0000 !default;
 $tertiary-color: #00ff00 !default;
+$quaternary-color: #045923 !default;
 $interaction-color: #ffff00 !default;
 
 $input-color: #ffffff;
-
+$text-color: #cccccc;
 $pill-col-bg: $interaction-color;
 $pill-col-border: $primary-color;
-
+$button-col-bg: $interaction-color;
 $tile-col-bg: $primary-color;
 
 $bar-col-bg: $tertiary-color;
