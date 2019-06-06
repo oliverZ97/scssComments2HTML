@@ -70,7 +70,7 @@ $text-color-light: #cccccc;
     padding-top: 5px;
   }
 
-  &:hover > .nav__header {
+  &:hover > .lsg_nav__header {
     opacity: 1;
     transition-duration: 0.4s;
   }
@@ -110,7 +110,7 @@ $text-color-light: #cccccc;
     margin-right: auto;
   }
 
-  &:hover > .article__header {
+  &:hover > .lsg_article__header {
     background-color: $secondary-color;
     color: $tertiary-color;
     opacity: 1;
