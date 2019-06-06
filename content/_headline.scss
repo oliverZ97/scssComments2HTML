@@ -3,6 +3,16 @@
 @import "./spacing";
 @import "./borders";
 
+/*
+"""title
+Headline
+"""
+
+"""overview
+This Article shows the different types of headlines
+"""
+*/
+
 .headline {
   font-family: $font-primary;
   -webkit-font-smoothing: antialiased;
@@ -10,39 +20,84 @@
   font-weight: $headline-weight;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-top: $margin-secondary;
+
+  /*
+    ---
+    description: Primary Headline Light
+    example: >
+        <div class="">
+            <p class="headline__primary headline--light">This Headline is a primary Headline.</p>
+        </div>
+
+    html: >
+            <p class="headline__primary headline--light"></p>
+    ---
+
+    */
 
   &__primary {
     @extend .headline;
     font-size: $headline-primary;
-    margin-left: $margin-tertiary;
   }
+  /*
+    ---
+    description: Secondary Headline Light
+    example: >
+        <div class="">
+            <p class="headline__secondary headline--light">This Headline is a secondary Headline.</p>
+        </div>
+
+    html: >
+            <p class="headline__secondary headline--light"></p>
+    ---
+
+    */
 
   &__secondary {
     @extend .headline;
     font-size: $headline-secondary;
   }
 
+  /*
+    ---
+    description: Tertiary Headline Light
+    example: >
+        <div class="">
+            <p class="headline__tertiary headline--light">This Headline is a tertiary Headline.</p>
+        </div>
+
+    html: >
+            <p class="headline__tertiary headline--light"></p>
+    ---
+
+    */
   &__tertiary {
     @extend .headline;
     font-size: $headline-tertiary;
-    margin: unset;
   }
 
+  /*
+    ---
+    description: Special Primary Headline Light
+    example: >
+        <div class="">
+            <p class="headline__special headline--light">This Headline is a special Headline.</p>
+        </div>
+
+    html: >
+            <p class="headline__special headline--light"></p>
+    ---
+
+    */
   &__special {
     @extend .headline__primary;
     border: 1px solid $quaternary-color;
     border-top-right-radius: $br-primary;
     border-bottom-right-radius: $br-primary;
     background-color: $quaternary-color;
-    max-width: $width-quaternary;
   }
 
   &--light {
-    color: $text-color;
-  }
-
-  &--dark {
     color: $text-color;
   }
 }

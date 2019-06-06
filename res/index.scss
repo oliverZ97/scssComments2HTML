@@ -127,6 +127,7 @@ $text-color-light: #cccccc;
   border: 1px solid $secondary-color;
   border-radius: 5px;
   width: 100%;
+  height: auto;
   opacity: 0.6;
 
   &:hover {
@@ -152,12 +153,13 @@ $text-color-light: #cccccc;
   justify-content: space-evenly;
   align-items: center;
   min-height: 100px;
-  height: 100%;
+  height: auto;
   color: $text-color-light;
   background-color: $tertiary-color;
   border-top: 1px solid $secondary-color;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding: 5px;
 }
 
 .lsg_example {
