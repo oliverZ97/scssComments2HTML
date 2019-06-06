@@ -6,27 +6,11 @@ Button
 """ 
 
 """overview
-This Page describes all existing Button Variations. Including: 
-Default Button | 
-Primary Button
+This Page describes all existing Button Variations
 """
 */
 
 .btn {
-/*
----
-description:  Default Button
-example: >
-    <button class="btn">
-    Default
-    </button>
-
-html: >
-    <div>
-        <button class="btn"></button>
-    </div>
----
-*/
   background-color: $tertiary-color;
   border-radius: 5px;
   color: $primary-color;

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <title>Team Enterprise Styleguide</title>
     <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="icon" type="image/svg" href="../logo.jpg" sizes="32x32">
 </head>
 
 <body class="lsg_body">
 
     <header class="lsg_header">
-        <img src="../logo.gif" width="40px" height="40px">
+        <img src="../logo.jpg" width="40px" height="40px">
         <h3 class="lsg_headline">Team Enterprise Styleguide</h3>
     </header>
 
@@ -37,26 +38,9 @@
         <!-- snippets -->
         <div class="lsg_content">
             <div><article class="lsg_article"><div class="lsg_article__header"><h1 class="lsg_title" id="Button">Button</h1>
-<p>This Page describes all existing Button Variations. Including: 
-Default Button | 
-Primary Button</p>
+<p>This Page describes all existing Button Variations</p>
 </div>
 <div class="lsg_article__sections"><section class="lsg_section"><div>
-<div class="lsg_description"><p>Default Button</p>
-</div>
-<div class="lsg_snippet"><div class="lsg_example"><button class="btn"> Default </button>
-</div>
-<div class="lsg_snip"><figure>
-<pre>
-<code>
-&lt;div&gt;
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
-<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-</code>
-</pre>
-</figure>
-</div>
-</div></div></section><section class="lsg_section"><div>
 <div class="lsg_description"><p>Primary Button</p>
 </div>
 <div class="lsg_snippet"><div class="lsg_example"><button class="btn btn__primary"> Primary </button>
@@ -80,7 +64,7 @@ Primary Button</p>
 </div>
 <div class="lsg_snippet"><div class="lsg_example"><div class="container color-primary">
     <div class="label">
-        <p>#0000ff</p>
+        <p>#333333</p>
     </div>
 </div>
 </div>
@@ -97,7 +81,7 @@ $primary-color
 </div>
 <div class="lsg_snippet"><div class="lsg_example"><div class="container color-secondary">
     <div class="label">
-        <p>#ff0000</p>
+        <p>#c66000</p>
     </div>
 </div>
 </div>
@@ -114,7 +98,7 @@ $secondary-color
 </div>
 <div class="lsg_snippet"><div class="lsg_example"><div class="container color-tertiary">
     <div class="label">
-        <p>#00ff00</p>
+        <p>#d3d3d3</p>
     </div>
 </div>
 </div>
@@ -127,11 +111,28 @@ $tertiary-color
 </figure>
 </div>
 </div></div></section><section class="lsg_section"><div>
+<div class="lsg_description"><p>Quaternary Color</p>
+</div>
+<div class="lsg_snippet"><div class="lsg_example"><div class="container color-quaternary">
+    <div class="label">
+        <p>#7a0a00</p>
+    </div>
+</div>
+</div>
+<div class="lsg_snip"><figure>
+<pre>
+<code>
+$quaternary-color
+</code>
+</pre>
+</figure>
+</div>
+</div></div></section><section class="lsg_section"><div>
 <div class="lsg_description"><p>Interaction Color</p>
 </div>
 <div class="lsg_snippet"><div class="lsg_example"><div class="container color-interaction">
     <div class="label">
-        <p>#ffff00</p>
+        <p>#ffcc00</p>
     </div>
 </div>
 </div>
@@ -160,6 +161,23 @@ $input-color
 </pre>
 </figure>
 </div>
+</div></div></section><section class="lsg_section"><div>
+<div class="lsg_description"><p>Text Color</p>
+</div>
+<div class="lsg_snippet"><div class="lsg_example"><div class="container color-text">
+    <div class="label">
+        <p>#cccccc</p>
+    </div>
+</div>
+</div>
+<div class="lsg_snip"><figure>
+<pre>
+<code>
+$text-color
+</code>
+</pre>
+</figure>
+</div>
 </div></div></section></div>
 </article><article class="lsg_article"><div class="lsg_article__header"><h1 class="lsg_title" id="Font">Font</h1>
 <p>This Article shows the different fonts</p>
@@ -183,7 +201,7 @@ $primary-font
 <div class="lsg_description"><p>Secondary Font</p>
 </div>
 <div class="lsg_snippet"><div class="lsg_example"><div>
-    <p class="text-primary text--light secondary-font">This is the secondary Font.</p>
+    <p class="secondary-font">This is the secondary Font.</p>
 </div>
 </div>
 <div class="lsg_snip"><figure>
