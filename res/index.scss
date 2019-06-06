@@ -4,6 +4,9 @@ $secondary-color: #009993;
 $tertiary-color: #232323;
 $text-color-light: #cccccc;
 
+//classes which end with -ds are responsible for styling the sections 
+//with example and snippet underneath each other. 
+
 .lsg_body {
   background-color: $bg-color;
   color: $text-color-light;
@@ -138,6 +141,24 @@ $text-color-light: #cccccc;
   }
 }
 
+.lsg_section-ds {
+  padding-left: auto;
+  padding-right: auto;
+  margin-top: 30px;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+    opacity: 1;
+    transition-duration: 0.4s;
+  }
+}
+
 .lsg_title {
   margin-block-end: 0;
   margin-block-start: 0;
@@ -162,6 +183,20 @@ $text-color-light: #cccccc;
   padding: 5px;
 }
 
+.lsg_snippet-ds{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: auto;
+  height: auto;
+  color: $text-color-light;
+  background-color: $tertiary-color;
+  border-top: 1px solid $secondary-color;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+} 
+
 .lsg_example {
   width: 50%;
   height: 100%;
@@ -170,10 +205,23 @@ $text-color-light: #cccccc;
   justify-content: center;
 }
 
+.lsg_example-ds {
+  padding-bottom: 5px;
+  border-bottom: 1px solid $secondary-color;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .lsg_snip {
   width: 50%;
   height: 100%;
   border-left: 1px solid $secondary-color;
+  overflow: scroll;
+}
+
+.lsg_snip-ds {
+  width: 100%;
   overflow: scroll;
 }
 
@@ -204,7 +252,7 @@ $text-color-light: #cccccc;
 
 @media screen and (min-width: 1408px) {
     .lsg_page {
-        width: 80%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
     }

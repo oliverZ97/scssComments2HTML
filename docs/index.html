@@ -1,4 +1,16 @@
-<!doctype html> <html> <head> <meta charset=UTF-8> <title>Team Enterprise Styleguide</title> <link rel=stylesheet type=text/css href=./main.css> <link href="/main.css" rel="stylesheet"></head> <body class=lsg_body> <header class=lsg_header> <img src=./logo.gif width=40px height=40px> <h3 class=lsg_headline>Team Enterprise Styleguide</h3> </header> <div class=lsg_page> <nav class=lsg_nav> <div class=lsg_nav__header> <p>Navigation</p> </div> <ul class=lsg_nav__list> <li class=lsg_nav__item><a class=lsg_link href="#Color Palette">Color Palette</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Headline>Headline</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Hero>Hero</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Pill>Pill</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Text>Text</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Button>Button</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Buttons>Buttons</a></li> <li class=lsg_nav__item><a class=lsg_link href=#BeispielA>BeispielA</a></li> </ul> </nav> <div class=lsg_content> <div><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id="Color Palette">Color Palette</h1> <p>This Article shows the different colors used in the Styleguide</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Primary Color</p> </div> <div class=lsg_snippet><div class=lsg_example><div class="container color-primary"> <div class=label> <p>#0000ff</p> </div> </div> </div> <div class=lsg_snip><figure> <pre>
+<!doctype html> <html> <head> <meta charset=UTF-8> <title>Team Enterprise Styleguide</title> <link rel=stylesheet type=text/css href=./main.css> <link href="/main.css" rel="stylesheet"></head> <body class=lsg_body> <header class=lsg_header> <img src=./logo.gif width=40px height=40px> <h3 class=lsg_headline>Team Enterprise Styleguide</h3> </header> <div class=lsg_page> <nav class=lsg_nav> <div class=lsg_nav__header> <p>Navigation</p> </div> <ul class=lsg_nav__list> <li class=lsg_nav__item><a class=lsg_link href=#Button>Button</a></li> <li class=lsg_nav__item><a class=lsg_link href="#Color Palette">Color Palette</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Font>Font</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Form>Form</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Headline>Headline</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Hero>Hero</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Breakpoints>Breakpoints</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Pill>Pill</a></li> <li class=lsg_nav__item><a class=lsg_link href=#Text>Text</a></li> </ul> </nav> <div class=lsg_content> <div><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Button>Button</h1> <p>This Page describes all existing Button Variations. Including: Default Button | Primary Button</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Default Button</p> </div> <div class=lsg_snippet><div class=lsg_example><button class=btn> Default </button> </div> <div class=lsg_snip><figure> <pre>
+<code>
+&lt;div&gt;
+    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span> <span class=hljs-attr>class</span>=<span class=hljs-string>"btn"</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
+<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
+</code>
+</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>Primary Button</p> </div> <div class=lsg_snippet><div class=lsg_example><button class="btn btn__primary"> Primary </button> </div> <div class=lsg_snip><figure> <pre>
+<code>
+&lt;div&gt;
+    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span> <span class=hljs-attr>class</span>=<span class=hljs-string>"btn btn__primary"</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
+<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
+</code>
+</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id="Color Palette">Color Palette</h1> <p>This Article shows the different colors used in the Styleguide</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Primary Color</p> </div> <div class=lsg_snippet><div class=lsg_example><div class="container color-primary"> <div class=label> <p>#0000ff</p> </div> </div> </div> <div class=lsg_snip><figure> <pre>
 <code>
 $primary-color
 </code>
@@ -18,6 +30,32 @@ $interaction-color
 <code>
 $input-color
 </code>
+</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Font>Font</h1> <p>This Article shows the different fonts</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Primary Font</p> </div> <div class=lsg_snippet><div class=lsg_example><div> <p class="text-primary text--light primary-font">This is the primary Font.</p> </div> </div> <div class=lsg_snip><figure> <pre>
+<code>
+$primary-font
+</code>
+</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>Secondary Font</p> </div> <div class=lsg_snippet><div class=lsg_example><div> <p class="text-primary text--light secondary-font">This is the secondary Font.</p> </div> </div> <div class=lsg_snip><figure> <pre>
+<code>
+$secondary-font
+</code>
+</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Form>Form</h1> <p>This Article shows the different types of Input Elements</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Default Input Field Text</p> </div> <div class=lsg_snippet><div class=lsg_example><div> <input type=text class=form__input placeholder="Insert Text here"/> <input type=password class=form__input placeholder="Insert Text here"/> <input type=number class=form__input placeholder="Insert Text here"/> <input type=email class=form__input placeholder=enterprise@asideas.com /> </div> </div> <div class=lsg_snip><figure> <pre>
+<code>
+&lt;div&gt;
+    &lt;input type="text" class="form__input" placeholder="Insert Text here"/&gt;
+     &lt;input type="password" class="form__input" placeholder="Insert Text here"/&gt;
+     &lt;input type="number" class="form__input" placeholder="Insert Text here"/&gt;
+     &lt;input type="email" class="form__input" placeholder="enterprise@asideas.com"/&gt;
+&lt;/div&gt;
+</code>
+</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>Round Input Field Text</p> </div> <div class=lsg_snippet><div class=lsg_example><div> <input type=text class=form__input--round placeholder="Insert Text here"/> <input type=password class=form__input--round placeholder="Insert Password here"/> <input type=number class=form__input--round placeholder="Insert Password here"/> <input type=email class=form__input--round placeholder=enterprise@asideas.com /> </div> </div> <div class=lsg_snip><figure> <pre>
+<code>
+&lt;div&gt;
+    &lt;input type="text" class="form__input--round" placeholder="Insert Text here"/&gt;
+    &lt;input type="password" class="form__input--round" placeholder="Insert Password here"/&gt;
+    &lt;input type="number" class="form__input--round" placeholder="Insert Password here"/&gt;
+    &lt;input type="email" class="form__input--round" placeholder="enterprise@asideas.com"/&gt;
+&lt;/div&gt;
+</code>
 </pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Headline>Headline</h1> <p>This Article shows the different types of headlines</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Primary Headline Light</p> </div> <div class=lsg_snippet><div class=lsg_example><div class=""> <p class="headline__primary headline--light">This Headline is a primary Headline.</p> </div> </div> <div class=lsg_snip><figure> <pre>
 <code>
 &lt;p <span class=hljs-class><span class=hljs-keyword>class</span></span>=<span class=hljs-string>"headline__primary headline--light"</span>&gt;<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>p</span>&gt;</span></span>
@@ -34,12 +72,16 @@ $input-color
 <code>
 &lt;p <span class=hljs-class><span class=hljs-keyword>class</span></span>=<span class=hljs-string>"headline__special headline--light"</span>&gt;<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>p</span>&gt;</span></span>
 </code>
-</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Hero>Hero</h1> <p>This Article shows the Hero of a page.</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Hero</p> </div> <div class=lsg_snippet><div class=lsg_example><div class=hero> <img class=hero__img src=./example.jpg> <p class=hero__text>This Headline is a primary Headline.</p> </div> </div> <div class=lsg_snip><figure> <pre>
+</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Hero>Hero</h1> <p>This Article shows the Hero of a page.</p> </div> <div class=lsg_article__sections><section class=lsg_section-ds><div> <div class=lsg_description><p>Hero</p> </div> <div class=lsg_snippet-ds><div class=lsg_example-ds><div class=hero> <img class=hero__img src=./example.jpg> <p class=hero__text>This Headline is a primary Headline.</p> </div> </div> <div class=lsg_snip-ds><figure> <pre>
 <code>
 &lt;div <span class=hljs-class><span class=hljs-keyword>class</span></span>=<span class=hljs-string>"hero"</span>&gt;
     <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>img</span> <span class=hljs-attr>class</span>=<span class=hljs-string>"hero__img"</span> <span class=hljs-attr>src</span>=<span class=hljs-string>"../res/example.jpg"</span>&gt;</span>
     <span class=hljs-tag>&lt;<span class=hljs-name>p</span> <span class=hljs-attr>class</span>=<span class=hljs-string>"hero__text"</span>&gt;</span>This Headline is a primary Headline.<span class=hljs-tag>&lt;/<span class=hljs-name>p</span>&gt;</span>
 <span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
+</code>
+</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Breakpoints>Breakpoints</h1> <p>This Article shows the Breakpoints for different Devices</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Breakpoints</p> </div> <div class=lsg_snippet><div class=lsg_example><div> <p class="text__primary text--light">$mq-mobile: 768px;</p> <p class="text__primary text--light">$mq-tablet: 769px;</p> <p class="text__primary text--light">$mq-desktop: 1024px;</p> <p class="text__primary text--light">$mq-widescreen: 1216px;</p> <p class="text__primary text--light">$mq-fullhd: 1408px;</p> </div> </div> <div class=lsg_snip><figure> <pre>
+<code>
+@media screen and (max-width $mq-mobile) {...}  @media screen and (min-width $mq-tablet) {...}
 </code>
 </pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Pill>Pill</h1> <p>This Article contains the Styles of different kinds of Pills</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Primary Pill</p> </div> <div class=lsg_snippet><div class=lsg_example><button class=pill__primary></button> </div> <div class=lsg_snip><figure> <pre>
 <code>
@@ -64,53 +106,5 @@ $input-color
 </pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>Special Text Light</p> </div> <div class=lsg_snippet><div class=lsg_example><div class=""> <p class="text__special text--light">This Text is a special Text.</p> </div> </div> <div class=lsg_snip><figure> <pre>
 <code>
 &lt;p <span class=hljs-class><span class=hljs-keyword>class</span></span>=<span class=hljs-string>"text__special text--light"</span>&gt;<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>p</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Button>Button</h1> <p>This Page describes all existing Button Variations. Including: Default Button | Primary Button</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>Default Button</p> </div> <div class=lsg_snippet><div class=lsg_example><button class=btn> Default </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span> <span class=hljs-attr>class</span>=<span class=hljs-string>"btn"</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>Primary Button</p> </div> <div class=lsg_snippet><div class=lsg_example><button class="btn btn__primary"> Primary </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span> <span class=hljs-attr>class</span>=<span class=hljs-string>"btn btn__primary"</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=Buttons>Buttons</h1> <p>This page descibes the existing button variations</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>So amazing</p> </div> <div class=lsg_snippet><div class=lsg_example><button> hi </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span> <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>div</span>&gt;</span>
-    <span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span>
-<span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span> <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>div</span>&gt;</span>
-    <span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span>
-<span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span> <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>div</span>&gt;</span>
-    <span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span>
-<span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section></div> </article><article class=lsg_article><div class=lsg_article__header><h1 class=lsg_title id=BeispielA>BeispielA</h1> <p>This page describes the existing button variations</p> </div> <div class=lsg_article__sections><section class=lsg_section><div> <div class=lsg_description><p>So amazing</p> </div> <div class=lsg_snippet><div class=lsg_example><button> hi </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>So amazing</p> </div> <div class=lsg_snippet><div class=lsg_example><button> hi </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>So amazing</p> </div> <div class=lsg_snippet><div class=lsg_example><button> hi </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
-</code>
-</pre> </figure> </div> </div></div></section><section class=lsg_section><div> <div class=lsg_description><p>So amazing</p> </div> <div class=lsg_snippet><div class=lsg_example><button> hi </button> </div> <div class=lsg_snip><figure> <pre>
-<code>
-&lt;div&gt;
-    <span class=xml><span class=hljs-tag>&lt;<span class=hljs-name>button</span>&gt;</span><span class=hljs-tag>&lt;/<span class=hljs-name>button</span>&gt;</span></span>
-<span class=xml><span class=hljs-tag>&lt;/<span class=hljs-name>div</span>&gt;</span></span>
 </code>
 </pre> </figure> </div> </div></div></section></div> </article></div> </div> </div> <script type="text/javascript" src="/index_bundle.js"></script></body> </html>

@@ -19,6 +19,60 @@ $text-primary: 1rem;
 $text-secondary: 0.9rem;
 $text-special: 1.5rem;
 
+/*
+"""title
+Font
+"""
+
+"""overview
+This Article shows the different fonts
+"""
+*/
+
+//*************************************************
+//Just for the Styleguide
+
+/*
+    ---
+    description: Primary Font
+    example: >
+        <div>
+            <p class="text-primary text--light primary-font">This is the primary Font.</p>
+        </div>
+
+    html: >
+        $primary-font
+    ---
+
+    */
+
+.primary-font {
+    font-family: $font-primary;
+    font-size: 18px;
+    color: $text-color;
+}
+
+/*
+    ---
+    description: Secondary Font
+    example: >
+        <div>
+            <p class="text-primary text--light secondary-font">This is the secondary Font.</p>
+        </div>
+
+    html: >
+        $secondary-font
+    ---
+
+    */
+
+.secondary-font {
+    font-family: $font-secondary;
+    font-size: 18px;
+    color: $text-color;
+}
+
+//*************************************************
 
 
 

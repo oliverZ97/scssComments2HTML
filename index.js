@@ -32,7 +32,7 @@ function getFilesFromDirectory(directory) {
     fs.readdirSync(directory, "utf8").forEach(file => {
         if (path.extname(file) === ".scss") {
             console.log(file);
-            scssFiles.push(directory + "/"+ file);
+            scssFiles.push(directory + "/" + file);
         }
     });
     console.log("---------------------");
@@ -55,7 +55,11 @@ function extractArticlesFromFiles(filesUrls) {
 
     filesUrls.forEach((fileUrl) => {
         let article = loader.readFileFromURL(fileUrl);
-        articles.push(article);
+        if(article.title === "Undefined") {
+            return;
+        } else {
+            articles.push(article);
+        }
     });
     console.log("ARTICLES:");
     console.log("---------------------");
@@ -75,14 +79,26 @@ function renderArticlesToHtml() {
         let overview = "<p>" + article.overview + "</p>\n";
         let artHTMLString = "<article class=\"lsg_article\">" + "<div class=\"lsg_article__header\">" + title + overview + "</div>\n<div class=\"lsg_article__sections\">";
         article.sections.map((section) => {
-            let sec = "<section class=\"lsg_section\"><div>\n";
-            let example = section[0].example;
-            let description = "<p>" + section[0].description + "</p>\n";
-            let mask = hljs.highlight('javascript', section[0].html).value;
-            let html = "<figure>\n<pre>\n<code>\n" + mask + "</code>\n</pre>\n</figure>\n";
+            let sec = "";
+            if (article.downside === true) {
+                sec = "<section class=\"lsg_section-ds\"><div>\n";
+                let example = section[0].example;
+                let description = "<p>" + section[0].description + "</p>\n";
+                let mask = hljs.highlight('javascript', section[0].html).value;
+                let html = "<figure>\n<pre>\n<code>\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-            sec = sec + "<div class=\"lsg_description\">" + description + "</div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" +html + "</div>\n</div>";
-            sec = sec + "</div></section>";
+                sec = sec + "<div class=\"lsg_description\">" + description + "</div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
+                sec = sec + "</div></section>";
+            } else {
+                sec = "<section class=\"lsg_section\"><div>\n";
+                let example = section[0].example;
+                let description = "<p>" + section[0].description + "</p>\n";
+                let mask = hljs.highlight('javascript', section[0].html).value;
+                let html = "<figure>\n<pre>\n<code>\n" + mask + "</code>\n</pre>\n</figure>\n";
+
+                sec = sec + "<div class=\"lsg_description\">" + description + "</div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" + html + "</div>\n</div>";
+                sec = sec + "</div></section>";
+            }
             artHTMLString = artHTMLString + sec;
         })
         artHTMLString = artHTMLString + "</div>\n</article>";
@@ -107,16 +123,16 @@ function fillTemplateWithHTML(directory, snippets) {
 
     let navString = "";
     let filterArticles = articles.filter((article => article.title !== "Undefined"));
-    let titles = filterArticles.forEach(article => { 
-        navString = navString + "<li class=\"lsg_nav__item\"><a class=\"lsg_link\" href=\"#"+ article.title + "\">" + article.title + "</a></li>\n";
+    let titles = filterArticles.forEach(article => {
+        navString = navString + "<li class=\"lsg_nav__item\"><a class=\"lsg_link\" href=\"#" + article.title + "\">" + article.title + "</a></li>\n";
     });
-        
+
     let filledTemplateWithNav = filledTemplateWithSnippets.replace("NAV_PLACEHOLDER", navString);
 
     return filledTemplateWithNav;
 }
 
-function writeIndexHtml(htmlContent) { 
+function writeIndexHtml(htmlContent) {
     fs.writeFileSync('./res/index.html', htmlContent);
     console.log("WRITE FILE index.html");
     console.log("---------------------");
