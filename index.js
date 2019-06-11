@@ -41,7 +41,7 @@ function getFilesFromDirectory(directory) {
 }
 
 function createSCSSImportFileContent(directory) {
-    let string = "import \'../res/index.scss\';\n";
+    let string = "";
     fs.readdirSync(directory, "utf8").forEach(file => {
         if (path.extname(file) === ".scss") {
             string = string + "import \'." + directory + "/" + file + "\';\n";

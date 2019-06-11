@@ -1,4 +1,3 @@
-import '../res/index.scss';
 import '../content/_border.scss';
 import '../content/_borders.scss';
 import '../content/_button.scss';
