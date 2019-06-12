@@ -6,8 +6,8 @@ $text-color-light: #cccccc;
 
 $primary-font: Arial, Helvetica, sans-serif;
 
-//classes which end with -ds are responsible for styling the sections 
-//with example and snippet underneath each other. 
+//classes which end with -ds are responsible for styling the sections
+//with example and snippet underneath each other.
 
 .lsg_body {
   background-color: $bg-color;
@@ -55,7 +55,6 @@ $primary-font: Arial, Helvetica, sans-serif;
     list-style-type: none;
     margin: 10px;
     padding: 0;
-    width: 90%;
   }
 
   &__header {
@@ -70,7 +69,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   }
 
   &__item {
-    border: 3px solid transparent;
+    //border: 3px solid transparent;
     width: 100%;
     padding-top: 5px;
   }
@@ -190,7 +189,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   padding: 5px;
 }
 
-.lsg_snippet-ds{
+.lsg_snippet-ds {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -202,7 +201,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 5px;
-} 
+}
 
 .lsg_example {
   width: 50%;
@@ -242,7 +241,7 @@ $primary-font: Arial, Helvetica, sans-serif;
 
   &:link {
     background: linear-gradient(to right, $secondary-color 50%, transparent 50%);
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     background-position: right bottom;
     transition: color 1s ease, background-position 1s ease;
     padding-left: 5px;
@@ -273,23 +272,34 @@ $primary-font: Arial, Helvetica, sans-serif;
   }
 }
 
+@media screen and (min-width: 769px) {
+  .lsg_nav {
+    max-height: 1000px;
+    overflow-y: scroll;
+
+    &__list {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (min-width: 1408px) {
-    .lsg_page {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .lsg_page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .lsg_body {
-        font-size: 16px;
-    }
+  .lsg_body {
+    font-size: 16px;
+  }
 
-    .lsg_link {
-        font-size: 18px;
-    }
+  .lsg_link {
+    font-size: 18px;
+  }
 
-    .lsg_nav {
-        max-height: 1000px;
-        overflow-y: scroll;
-    }
+  .lsg_nav {
+    max-height: 1000px;
+    overflow-y: scroll;
+  }
 }

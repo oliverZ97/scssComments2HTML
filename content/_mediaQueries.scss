@@ -18,10 +18,23 @@ This Article shows the Breakpoints for different Devices
 
 /*
     ---
-    description: Breakpoints
+    description: Breakpoints with max-width
     example: >
         <div>
             <p class="text__primary text--light">$mq-mobile: 768px;</p>
+        </div>
+
+    html: >
+        @media screen and (max-width $mq-mobile) {} 
+    ---
+
+    */
+
+    /*
+    ---
+    description: Breakpoints with min-width
+    example: >
+        <div>
             <p class="text__primary text--light">$mq-tablet: 769px;</p>
             <p class="text__primary text--light">$mq-desktop: 1024px;</p>
             <p class="text__primary text--light">$mq-widescreen: 1216px;</p>
@@ -29,8 +42,7 @@ This Article shows the Breakpoints for different Devices
         </div>
 
     html: >
-        @media screen and (max-width $mq-mobile) {...} 
-        @media screen and (min-width $mq-tablet) {...}
+        @media screen and (min-width $mq-tablet) {}
     ---
 
     */

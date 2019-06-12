@@ -25,12 +25,10 @@ This Article shows the different types of text
     ---
     description: Primary Text Light
     example: >
-        <div class="">
             <p class="text__primary text--light">This Text is a primary Text.</p>
-        </div>
 
     html: >
-            <p class="text__primary text--light"></p>
+            <p class="text__primary text--light">This Text is a primary Text.</p>
     ---
 
     */
@@ -44,12 +42,10 @@ This Article shows the different types of text
     ---
     description: Secondary Text Light
     example: >
-        <div class="">
             <p class="text__secondary text--light">This Text is a secondary Text.</p>
-        </div>
 
     html: >
-            <p class="text__secondary text--light"></p>
+            <p class="text__secondary text--light">This Text is a secondary Text.</p>
     ---
 
     */
@@ -63,12 +59,10 @@ This Article shows the different types of text
     ---
     description: Special Text Light
     example: >
-        <div class="">
             <p class="text__special text--light">This Text is a special Text.</p>
-        </div>
 
     html: >
-            <p class="text__special text--light"></p>
+            <p class="text__special text--light">This Text is a special Text.</p>
     ---
 
     */
