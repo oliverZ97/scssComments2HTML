@@ -14,7 +14,8 @@ function main(argv) {
     console.log("DIRECTORY TO LOOK FOR FILES: " + path);
     let filesUrls = getFilesFromDirectory(path);
     let articles = extractArticlesFromFiles(filesUrls);
-    let snippets = renderArticlesToHtml(articles);
+    let sortedArticles = sortArticles();
+    let snippets = renderArticlesToHtml(sortedArticles);
     let template = fillTemplateWithHTML(path, snippets);
     let importCSS = createSCSSImportFileContent(path);
 
@@ -55,7 +56,7 @@ function extractArticlesFromFiles(filesUrls) {
 
     filesUrls.forEach((fileUrl) => {
         let article = loader.readFileFromURL(fileUrl);
-        if(article.title === "Undefined") {
+        if (article.title === "Undefined") {
             return;
         } else {
             articles.push(article);
@@ -66,6 +67,17 @@ function extractArticlesFromFiles(filesUrls) {
     console.log(articles);
     console.log("---------------------");
     return articles;
+}
+
+function sortArticles() {
+    articles.sort(function (a, b) {
+        let titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase()
+        if (titleA < titleB) //sort string ascending
+            return -1
+        if (titleA > titleB)
+            return 1
+        return 0 //default return value (no sorting)
+    })
 }
 
 function renderArticlesToHtml() {
@@ -83,14 +95,13 @@ function renderArticlesToHtml() {
             //creates a unique id for every code snippet
             let id = "";
             let trigger = "#";
-            if(section.description === undefined) {
-                id = article.title + "_" + Math.round(Math.random()*10000);
+            if (section.description === undefined) {
+                id = article.title + "_" + Math.round(Math.random() * 10000);
                 trigger = trigger + id;
             } else {
                 id = article.title + "_" + section.description;
                 trigger = trigger + id;
             }
-            console.log(id);
             if (article.downside === true) {
                 sec = "<section class=\"lsg_section-ds\"><div>\n";
                 let example = section[0].example;
@@ -99,7 +110,7 @@ function renderArticlesToHtml() {
                 let mask = hljs.highlight('javascript', section[0].html).value;
                 let html = "<figure>\n<pre>\n<code id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-                sec = sec + "<div class=\"lsg_description\">" + description + copyBtn + "</div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
+                sec = sec + "<div class=\"lsg_section_header\">" + description + copyBtn + "</div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
                 sec = sec + "</div></section>";
             } else {
                 sec = "<section class=\"lsg_section\"><div>\n";
@@ -109,7 +120,7 @@ function renderArticlesToHtml() {
                 let mask = hljs.highlight('javascript', section[0].html).value;
                 let html = "<figure id=\"" + id + "\" >\n<pre>\n<code >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-                sec = sec + "<div class=\"lsg_section_header\">" + description +  copyBtn + "</div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" + html + "</div>\n</div>";
+                sec = sec + "<div class=\"lsg_section_header\">" + description + copyBtn + "</div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" + html + "</div>\n</div>";
                 sec = sec + "</div></section>";
             }
             artHTMLString = artHTMLString + sec;
