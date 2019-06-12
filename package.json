@@ -27,6 +27,7 @@
   "homepage": "https://github.com/oliverZ97/scssComments2HTML#readme",
   "dependencies": {
     "autoprefixer": "^9.6.0",
+    "clipboard": "^2.0.4",
     "file-system": "^2.2.2",
     "highlight.js": "^9.15.8",
     "js-yaml": "^3.13.1"
