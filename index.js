@@ -83,10 +83,8 @@ function renderArticlesToHtml() {
             //creates a unique id for every code snippet
             let id = "";
             let trigger = "#";
-            let value = section[0].html;
             if(section.description === undefined) {
-                //id = article.title + "_" + Math.random()*10000;
-                id = article.title + "_" + 10000;
+                id = article.title + "_" + Math.round(Math.random()*10000);
                 trigger = trigger + id;
             } else {
                 id = article.title + "_" + section.description;
@@ -97,7 +95,7 @@ function renderArticlesToHtml() {
                 sec = "<section class=\"lsg_section-ds\"><div>\n";
                 let example = section[0].example;
                 let description = "<p>" + section[0].description + "</p>\n";
-                let copyBtn = "<button class=\"clipboard\" data-clipboard-target=\"" + trigger + "\" data-clipboard-text=\"success\">copy</button>\n";
+                let copyBtn = "<button class=\"clipboard\" data-clipboard-target=\"" + trigger + "\">copy</button>\n";
                 let mask = hljs.highlight('javascript', section[0].html).value;
                 let html = "<figure>\n<pre>\n<code id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
@@ -107,7 +105,7 @@ function renderArticlesToHtml() {
                 sec = "<section class=\"lsg_section\"><div>\n";
                 let example = section[0].example;
                 let description = "<p>" + section[0].description + "</p>\n";
-                let copyBtn = "<button class=\"clipboard\" data-clipboard-target=\"" + trigger + "\" data-clipboard-text=\"success\">copy</button>\n";
+                let copyBtn = "<button class=\"clipboard\" data-clipboard-target=\"" + trigger + "\">copy</button>\n";
                 let mask = hljs.highlight('javascript', section[0].html).value;
                 let html = "<figure id=\"" + id + "\" >\n<pre>\n<code >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
