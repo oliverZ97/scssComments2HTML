@@ -1,0 +1,40 @@
+.container-row {
+    display: flex;
+    flex-direction: row;
+
+    &--space-between {
+        @extend .container-row;
+        justify-content: space-between;
+    }
+    
+    &--flex-end {
+        @extend .container-row;
+        justify-content: flex-end;
+    }
+
+    &--center {
+        @extend .container-row;
+        justify-content: center;
+    }
+
+    &--flex-start {
+        @extend .container-row;
+        justify-content: flex-start;
+    }
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+
+    &--items-centered {
+        @extend .container-column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--flex-start {
+        @extend .container-column;
+        justify-content: flex-start;
+    }
+}

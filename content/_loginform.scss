@@ -1,0 +1,44 @@
+/*
+"""title
+Login Form
+"""
+
+"""overview
+This Article shows the layout of the Login Form
+"""
+*/
+
+/*
+    ---
+    description: Login Form
+    example: >
+        <form class="form">
+            <div class="container-column container-column--items-centered">
+                <input class="text text__secondary text--dark form__input" type="text" placeholder="Username" minLength="4" name="username"></input>
+            </div>
+            <div class="container-column container-column--items-centered">
+                <input class="text text__secondary text--dark form__input" type="password" placeholder="Password" minLength="6" name="password"></input>
+            </div>
+            <div class="container-column container-column--items-centered">
+                <button class="btn btn__primary text text__primary text--light" type="submit">Login</button>
+            </div>
+            <p class="text text__primary text--light">Oops! Please check your Login Data.</p>
+        </form>
+
+    html: >
+        <form class="form">
+            <div class="container-column container-column--items-centered">
+                <input class="text text__secondary text--dark form__input" type="text" placeholder="Username" minLength="4" name="username"></input>
+            </div>
+            <div class="container-column container-column--items-centered">
+                <input class="text text__secondary text--dark form__input" type="password" placeholder="Password" minLength="6" name="password"></input>
+            </div>
+            <div class="container-column container-column--items-centered">
+                <button class="btn btn__primary text text__primary text--light" type="submit">Login</button>
+            </div>
+            <p class="text text__primary text--light">Oops! Please check your Login Data.</p>
+        </form>
+        
+    ---
+
+    */

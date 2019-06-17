@@ -107,8 +107,8 @@ function renderArticlesToHtml() {
                 let example = section[0].example;
                 let description = "<p>" + section[0].description + "</p>\n";
                 let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy</button>\n";
-                let mask = hljs.highlight('javascript', section[0].html).value;
-                let html = "<figure>\n<pre>\n<code id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
+                let mask = hljs.highlight('html', section[0].html).value;
+                let html = "<figure>\n<pre>\n<code  id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
                 sec = sec + "<div class=\"lsg_section_header\">" + description + copyBtn + "</div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
                 sec = sec + "</div></section>";
@@ -117,7 +117,7 @@ function renderArticlesToHtml() {
                 let example = section[0].example;
                 let description = "<p>" + section[0].description + "</p>\n";
                 let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy</button>\n";
-                let mask = hljs.highlight('javascript', section[0].html).value;
+                let mask = hljs.highlight('html', section[0].html).value;
                 let html = "<figure id=\"" + id + "\" >\n<pre>\n<code >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
                 sec = sec + "<div class=\"lsg_section_header\">" + description + copyBtn + "</div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" + html + "</div>\n</div>";
