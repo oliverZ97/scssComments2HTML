@@ -1,4 +1,4 @@
-#Team Enterprise Styleguide
+# Team Enterprise Styleguide
 
 This Tool reads commented .scss-Files from a specified Folder and extract the comments to html. 
 
@@ -14,7 +14,7 @@ This Tool reads commented .scss-Files from a specified Folder and extract the co
 
 **HOW TO USE THE STYLEGUIDE**
 
-You can import the styleguide.min.css file with the <link>-Tag or you copy it directly into your Project and use it like a regulary .css-File.
+You can import the styleguide.min.css file with the link-Tag or you copy it directly into your Project and use it like a regulary .css-File.
 
 **HOW IT WORKS**
 
