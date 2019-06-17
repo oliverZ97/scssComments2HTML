@@ -1,0 +1,55 @@
+@import './configuration';
+
+/*
+"""title
+Menu
+"""
+
+"""overview
+This Article shows the style of the Menu.
+"""
+
+"""downside"""
+*/
+
+.contentMenu {
+
+  /*
+---
+description: Menu
+example: >
+    <div class="container-row--space-between contentMenu">
+        <input id="searchbar" class="form__input--round text__secondary" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+        <div>
+            <button class="pill__primary pill--filter" onClick={this.handleFilterClick}></button>
+            <button id="toggleDisplay" class="pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>
+        </div>
+    </div>
+
+html: >
+    <div class="container-row--space-between contentMenu">
+        <input id="searchbar" class="form__input--round text__secondary" type="text" placeholder="Search" onKeyPress={this.handleKeyPress} onChange={this.handleSearch}></input>
+        <div>
+            <button class="pill__primary pill--filter" onClick={this.handleFilterClick}></button>
+            <button id="toggleDisplay" class="pill__primary pill--displayTile" onClick={this.handleDisplayToggle}></button>
+        </div>
+    </div>
+---
+*/
+
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+}
+
+@media screen and (max-width: $mq-mobile){
+    .contentMenu {
+        width: $width-primary;
+    }
+}
+
+@media screen and (min-width: $mq-tablet) {
+    .contentMenu {
+        width: $width-primary;
+    }
+}
+

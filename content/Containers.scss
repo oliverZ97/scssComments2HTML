@@ -1,0 +1,51 @@
+@import './configuration';
+
+/*
+"""title
+Container
+"""
+
+"""overview
+This Article shows the different types of Containers.
+"""
+
+"""downside"""
+*/
+
+.footer {
+
+    /*
+    ---
+    description: Footer-Container
+    example: >
+       <div class="footer"></div>
+
+    html: >
+        <div class="footer"></div>
+    ---
+
+    */
+
+    background-color: $bar-col-bg;
+    min-height: 60px;
+    position: static;
+}
+
+.header {
+/*
+    ---
+    description: Header-Container
+    example: >
+        <div class="header"></div>
+
+    html: >
+        <div class="header"></div>
+    ---
+
+    */
+
+    background-color: $tertiary-color;
+    border-bottom: 2px solid $interaction-color;
+    min-height: 60px;
+    width: $width-primary;
+}

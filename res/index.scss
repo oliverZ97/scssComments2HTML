@@ -47,7 +47,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   background-color: $primary-color;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 2px solid $secondary-color;
   border-radius: 5px;
 
@@ -237,6 +237,8 @@ $primary-font: Arial, Helvetica, sans-serif;
   font-size: 16px;
   text-decoration: none;
   border-left: 3px solid $secondary-color;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   width: 50%;
 
   &:link {
@@ -246,6 +248,8 @@ $primary-font: Arial, Helvetica, sans-serif;
     transition: color 1s ease, background-position 1s ease;
     padding-left: 5px;
     padding-right: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   &:hover {

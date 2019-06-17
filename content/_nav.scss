@@ -1,12 +1,50 @@
 @import './mediaQueries';
 @import './spacing';
 @import './colors';
+@import './Containers.scss';
+/*
+"""title
+Navigation
+"""
 
-.nav {
-    background-color: $tertiary-color;
-    border-bottom: $interaction-color;
-    width: $width-primary;
-}
+"""overview
+This Article shows the Navigationbar.
+"""
+
+"""downside"""
+*/
+
+/*
+    ---
+    description: Navigation
+    example: >
+        <div class="header">
+          <div class="nav__content container-row--space-between">
+            <div>
+              <button class="pill__secondary pill--searches"></button>
+              <button class="pill__secondary pill--favorite"></button>
+            </div>
+            <div>
+              <button class="pill__secondary pill--logout"></button>
+            </div>
+          </div>
+        </div>
+
+    html: >
+        <div class="header">
+          <div class="nav__content container-row--space-between">
+            <div>
+              <button class="pill__secondary pill--searches"></button>
+              <button class="pill__secondary pill--favorite"></button>
+            </div>
+            <div>
+              <button class="pill__secondary pill--logout"></button>
+            </div>
+          </div>
+        </div>
+    ---
+
+    */
 
 @media screen and (max-width: $mq-mobile){
     .nav__content {

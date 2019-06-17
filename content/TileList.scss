@@ -1,24 +1,23 @@
 /*
 """title
-Tile-Slider
+Tile-List
 """
 
 """overview
-This Article shows the Layout of a Tileslider.
+This Article shows the Layout of a Tile-List.
 """
 
 """downside"""
 */
 
-
-.tileSlider {
-/*
+.tileList {
+  /*
     ---
-    description: A Tile-Slider like the one from Netflix
+    description: A Tile-List
     example: >
         <div>
             <h2 class="text--dark headline headline__special">Priorität 1</h2>
-            <div class="tileSlider container-row--space-between">
+            <div class="tileList container-row--center">
                 <div class="container-row">
                     <div class="tile">
                         <div class="tile__meta">
@@ -93,7 +92,7 @@ This Article shows the Layout of a Tileslider.
     html: >
         <div>
             <h2 class="text--dark headline headline__special">Priorität 1</h2>
-            <div class="tileSlider container-row--space-between">
+            <div class="tileList container-row--center">
                 <div class="container-row">
                     <div class="tile">
                         <div class="tile__meta">
@@ -168,6 +167,5 @@ This Article shows the Layout of a Tileslider.
 
     */
 
-    margin: 10px;
-    overflow-x: scroll;
+  flex-wrap: wrap;
 }

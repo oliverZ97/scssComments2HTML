@@ -1,0 +1,255 @@
+@import "./configuration";
+@import "./container";
+
+/*
+"""title
+Tiles
+"""
+
+"""overview
+This Article shows the different Tiles.
+"""
+
+"""downside"""
+*/
+
+.tile {
+  /*
+<div class="tile">
+        <div class="tile__meta">
+          <h6 class="headline__tertiary headline--light">DPA</h6>
+          <h6 class="headline__tertiary headline--light">Politik</h6>
+          <h6 class="headline__tertiary headline--light">2019-06-12T11:18</h6>
+        </div>
+        <div class="tile__content">
+          <p class="tile__text text--light" >EU pocht auf Milliarden-Zahlung durch Großbritannien auch bei No-Deal-Brexit</p>
+          <button class="pill__secondary pill--favorite"></button>
+        </div>
+    </div>*/
+  /*
+    ---
+    description: Article Tile
+    example: >
+        <div class="tile">
+            <div class="tile__meta">
+                <h6 class="headline__tertiary headline--light">DPA</h6>
+                <h6 class="headline__tertiary headline--light">Politik</h6>
+                <h6 class="headline__tertiary headline--light">2019-06-12T11:18</h6>
+            </div>
+            <div class="tile__content">
+                <p class="tile__text text--light" >EU pocht auf Milliarden-Zahlung durch Großbritannien auch bei No-Deal-Brexit</p>
+                <button class="pill__secondary pill--favorite"></button>
+            </div>
+        </div>
+
+    html: >
+        <div class="tile">
+            <div class="tile__meta">
+                <h6 class="headline__tertiary headline--light">DPA</h6>
+                <h6 class="headline__tertiary headline--light">Politik</h6>
+                <h6 class="headline__tertiary headline--light">2019-06-12T11:18</h6>
+            </div>
+            <div class="tile__content">
+                <p class="tile__text text--light" >EU pocht auf Milliarden-Zahlung durch Großbritannien auch bei No-Deal-Brexit</p>
+                <button class="pill__secondary pill--favorite"></button>
+            </div>
+        </div>
+    ---
+
+    */
+
+  border: 2px solid $secondary-color;
+  border-radius: $br-primary;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  margin: 5px;
+
+  &__meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $secondary-color;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    line-height: 20px;
+    background-color: $quaternary-color;
+    padding: $padding-primary;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $padding-primary;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: $text-primary;
+    flex: 2;
+    margin-top: 3px;
+  }
+
+  &__text--hiddenoverflow {
+    overflow: hidden;
+  }
+}
+
+.tile:hover {
+  border: 2px solid $quaternary-color;
+}
+
+@media screen and (max-width: $mq-mobile) {
+  .tile {
+    height: 150px;
+    width: 320px;
+
+    &__headline {
+      font-size: $headline-tertiary;
+    }
+  }
+}
+
+@media screen and (min-width: $mq-tablet) {
+  .tile__headline {
+    font-size: $headline-tertiary;
+  }
+}
+
+.filterSubmenuTile {
+
+  /*
+    ---
+    description: Checkbox Tile
+    example: >
+        <div class="tile container-column--flex-start">
+          <div class="container-row--center">
+            <label class="filterSubmenuTile__label">
+              <input id="checkbox" class="filterSubmenuTile__input" ></input>
+              <span class="filterSubmenuTile__checkmark"></span>
+            </label>
+            <div class="filterSubmenuTile__content">
+              <p class="text__special text--light filterSubmenuTile__text">Kategorie</p>
+            </div>
+          </div >
+        </div >
+
+    html: >
+        <div class="tile container-column--flex-start">
+          <div class="container-row--center">
+            <label class="filterSubmenuTile__label">
+              <input id="checkbox" class="filterSubmenuTile__input" ></input>
+              <span class="filterSubmenuTile__checkmark"></span>
+            </label>
+            <div class="filterSubmenuTile__content">
+              <p class="text__special text--light filterSubmenuTile__text">Kategorie</p>
+            </div>
+          </div >
+        </div >
+    ---
+
+    */
+    
+    border: 1px solid $secondary-color;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    background-color: $tile-col-bg;
+}
+
+.filterSubmenuTile__label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: 30%;
+}
+
+.filterSubmenuTile__content {
+    width: 70%;
+    position: relative;
+}
+
+.filterSubmenuTile__text {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+}
+
+.filterSubmenuTile__label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.filterSubmenuTile__checkmark {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: $secondary-color;
+    border-radius: 50px;
+}
+
+.filterSubmenuTile__label input:checked ~ .filterSubmenuTile__checkmark {
+    background: $interaction-color;
+}
+
+.filterSubmenuTile__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.filterSubmenuTile__label input:checked ~ .filterSubmenuTile__checkmark:after {
+    display: block;
+}
+
+.filterSubmenuTile__label .filterSubmenuTile__checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid $primary-color;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: $mq-mobile) {
+    .filterSubmenuTile {
+        width: 200px;
+        height: 100px;
+    }
+
+    .filterSubmenuTile__checkmark {
+        top: 10px;
+        left: 10px;
+    }
+
+    .filterSubmenuTile img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: $mq-tablet){
+    .filterSubmenuTile__checkmark {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media screen and (min-width: $mq-desktop) {
+    .filterSubmenuTile {
+        width: 300px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,118 @@
+@import './configuration';
+
+/*
+"""title
+Detail-View
+"""
+
+"""overview
+This Article shows the Layout of the Detail-View.
+"""
+
+"""downside"""
+*/
+
+.lsg__detailViev {
+    width: 80%;
+    background-color: $primary-color;
+    border: 1px solid $secondary-color;
+    justify-items: center;
+}
+
+.detailView {
+
+    /*
+    ---
+    description: Detail-View
+    example: >
+        <div class="lsg__detailView">
+            <div class="container-row--space-between">
+                <button class="pill__primary pill--favorite-l" type="button"></button>
+                <button class="pill__primary pill--back"></button>
+            </div>
+            <h4 class="headline headline__special">Bundesanwaltschaft lädt Zeugen in „Nordkreuz“-Verfahren vor</h4>
+            <div class="container-row--space-between">
+                <p class="headline__tertiary headline--light">DPA/Politik</p>
+                <p class="headline__tertiary headline--light">2019-06-17T12:15:27.614Z</p>
+            </div>
+            <img class="detailView__img" alt="Beispielbild" src="../res/example.jpg"></img>
+            <p class="text__primary text--light">Rostock/Karlsruhe (dpa/mv) – Die Bundesanwaltschaft hat in den Ermittlungen um die mutmaßlich rechtsextreme Prepper-Gruppe „Nordkreuz“ Zeugen geladen, die auf Listen der Verdächtigen standen. Das bestätigte am Montag eine Sprecherin der Bundesanwaltschaft in Karlsruhe. Verschiedene Medien hatten berichtet, dass es sich um 29 Personen handele, darunter Politiker von SPD, Grünen und Linken. Die Sprecherin der Bundesanwaltschaft wollte dies weder bestätigen noch dementieren. Ebenfalls wollte sie nicht bestätigen, dass es sich bei den Listen um „Feindeslisten“ handele.Im August 2017 hatten Spezialkräfte des Bundeskriminalamts (BKA) die Räume von zwei Männern in Rostock und Banzkow bei Schwerin durchsucht. Der Mann aus Rostock, ein Anwalt, der zu jener Zeit auch Mitglied der Bürgerschaft war, und der Banzkower, ein suspendierter Polizist, sollen eine schwere staatsgefährdende Gewalttat vorbereitet haben, so der Vorwurf. Sie sollen unter anderem Waffen gelagert und Listen mit politischen Gegnern angefertigt haben, die im Falle eines Staatszusammenbruchs getötet werden sollten. Koordiniert hätten sie sich über eine Chatgruppe namens „Nordkreuz“.Auch die Sicherheitsbehörden in MV ermitteln im „Nordkreuz“-Komplex. Vergangene Woche waren vier aktive und ehemalige Beamte des SEK festgenommen worden, zwei befinden sich mittlerweile in Untersuchungshaft. Drei von ihnen sollen über Jahre Munition aus Polizeibeständen beiseite geschafft und dem vierten übergeben haben, der Kontakt zur Prepper-Szene haben soll. Aufmerksam wurden die Ermittler durch die Ermittlungen des Generalbundesanwalts im „Nordkreuz“-Verfahren, hatte die Schweriner Staatsanwaltschaft erklärt.# Notizblock## Orte – [Bundesanwaltschaft](Brauerstraße 30, 76135 Karlsruhe, Deutschland)* * * * Die folgenden Informationen sind nicht zur Veröffentlichung bestimmt## Ansprechpartner – Presse Bundesanwaltschaft, +49 721 8191 4100## Kontakte – Autor: Hannes Stepputat (Hamburg) – Redaktion: Markus Klemm (Hamburg), +49 40 411332102,<hamburg@dpa.com> – Foto: Newsdesk, + 49 30 2852 31515, <foto@dpa.com>dpa fhs yymv n1 klm171415 Jun 19</p>
+        </div>
+        
+    html: >
+        <div class="detailView">
+            <div class="container-row--space-between">
+                <button class="pill__primary pill--favorite-l" type="button"></button>
+                <button class="pill__primary pill--back"></button>
+            </div>
+            <h4 class="headline headline__special" dangerouslySetInnerHTML=Bundesanwaltschaft lädt Zeugen in „Nordkreuz“-Verfahren vor></h4>
+            <div class="container-row--space-between">
+                <p class="headline__tertiary headline--light">DPA/Politik</p>
+                <p class="headline__tertiary headline--light">2019-06-17T12:15:27.614Z</p>
+            </div>
+            <img class="detailView__img" alt="Beispielbild" src="../example.jpg"></img>
+            <p class="text__primary text--light">Rostock/Karlsruhe (dpa/mv) – Die Bundesanwaltschaft hat in den Ermittlungen um die mutmaßlich rechtsextreme Prepper-Gruppe „Nordkreuz“ Zeugen geladen, die auf Listen der Verdächtigen standen. Das bestätigte am Montag eine Sprecherin der Bundesanwaltschaft in Karlsruhe. Verschiedene Medien hatten berichtet, dass es sich um 29 Personen handele, darunter Politiker von SPD, Grünen und Linken. Die Sprecherin der Bundesanwaltschaft wollte dies weder bestätigen noch dementieren. Ebenfalls wollte sie nicht bestätigen, dass es sich bei den Listen um „Feindeslisten“ handele.Im August 2017 hatten Spezialkräfte des Bundeskriminalamts (BKA) die Räume von zwei Männern in Rostock und Banzkow bei Schwerin durchsucht. Der Mann aus Rostock, ein Anwalt, der zu jener Zeit auch Mitglied der Bürgerschaft war, und der Banzkower, ein suspendierter Polizist, sollen eine schwere staatsgefährdende Gewalttat vorbereitet haben, so der Vorwurf. Sie sollen unter anderem Waffen gelagert und Listen mit politischen Gegnern angefertigt haben, die im Falle eines Staatszusammenbruchs getötet werden sollten. Koordiniert hätten sie sich über eine Chatgruppe namens „Nordkreuz“.Auch die Sicherheitsbehörden in MV ermitteln im „Nordkreuz“-Komplex. Vergangene Woche waren vier aktive und ehemalige Beamte des SEK festgenommen worden, zwei befinden sich mittlerweile in Untersuchungshaft. Drei von ihnen sollen über Jahre Munition aus Polizeibeständen beiseite geschafft und dem vierten übergeben haben, der Kontakt zur Prepper-Szene haben soll. Aufmerksam wurden die Ermittler durch die Ermittlungen des Generalbundesanwalts im „Nordkreuz“-Verfahren, hatte die Schweriner Staatsanwaltschaft erklärt.# Notizblock## Orte – [Bundesanwaltschaft](Brauerstraße 30, 76135 Karlsruhe, Deutschland)* * * * Die folgenden Informationen sind nicht zur Veröffentlichung bestimmt## Ansprechpartner – Presse Bundesanwaltschaft, +49 721 8191 4100## Kontakte – Autor: Hannes Stepputat (Hamburg) – Redaktion: Markus Klemm (Hamburg), +49 40 411332102,<hamburg@dpa.com> – Foto: Newsdesk, + 49 30 2852 31515, <foto@dpa.com>dpa fhs yymv n1 klm171415 Jun 19</p>
+        </div>
+        
+    ---
+
+    */
+    position: absolute;
+    top: 46px;
+    left: 10%;
+    right: 10%;
+    width: auto;
+    z-index: 99999;
+    background-color: $primary-color;
+    border: 1px solid $secondary-color;
+    justify-items: center;
+}
+
+.detailView__img {
+    object-fit: cover;
+    width: $width-primary;
+    max-height: 200px;
+}
+
+@media screen and (max-width: $mq-mobile){
+    .detailView {
+        width: 97%;
+        left: 0;
+        padding: $padding-primary;
+    }
+
+    .detailView__img {
+        width: $width-primary;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: $mq-tablet){
+    .detailView {
+        padding: $padding-primary;
+    }
+}
+
+@media screen and (min-width: $mq-desktop) {
+    .detailView {
+        padding: $padding-primary;
+        margin-top: 0px;
+        top: 46px;
+        width: $width-secondary;
+    }
+
+}
+
+@media screen and (min-width: $mq-widescreen) {
+    .detailView {
+        padding: $padding-primary; 
+        margin: $margin-auto;
+        width: $width-secondary;
+    }
+}
+
+@media screen and (min-width: $mq-fullhd) {
+    .detailView {
+        width: $width-tertiary;
+    }
+}
