@@ -28,6 +28,6 @@ You can import the styleguide.min.css file with the <link>-Tag or you copy it di
 
 5. To read the correct information from the Files, your Comments should look like this:
 
-![Format Example](https://github.com/oliverZ97/scssComments2HTML/blob/master/assets/readme_1.png)
+![Format Example](https://github.com/oliverZ97/scssComments2HTML/blob/master/assets/readme_1.png =250x400)
 
 6. Out of all the content the Tool creates a styleguide.min.css and a webpage.min.css, placed in the /docs-Folder. A index.html is also created inside the /docs-Folder. This file contains the Living Styelguide which you can explore in your Browser.
