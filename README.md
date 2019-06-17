@@ -26,8 +26,8 @@ You can import the styleguide.min.css file with the <link>-Tag or you copy it di
 
 4. a section contains an "example" of the rendered object, an "snippet" which shows how the Code looks like. And also an optional description.
 
-To read the correct information from the Files, your Comments should look like this:
+5. To read the correct information from the Files, your Comments should look like this:
 
-![Format Example][./assets/readme_1.png]
+![Format Example](https://github.com/oliverZ97/scssComments2HTML/blob/master/assets/readme_1.png)
 
-5. Out of all the content the Tool creates a styleguide.min.css and a webpage.min.css, placed in the /docs-Folder. A index.html is also created inside the /docs-Folder. This file contains the Living Styelguide which you can explore in your Browser.
+6. Out of all the content the Tool creates a styleguide.min.css and a webpage.min.css, placed in the /docs-Folder. A index.html is also created inside the /docs-Folder. This file contains the Living Styelguide which you can explore in your Browser.
