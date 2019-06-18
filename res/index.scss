@@ -265,7 +265,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   color: $tertiary-color;
   border: 1px solid $text-color-light;
   border-radius: 5px;
-  width: 50px;
+  min-width: 50px;
   height: 20px;
   font-family: $primary-font;
 
