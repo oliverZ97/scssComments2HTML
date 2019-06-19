@@ -1,11 +1,8 @@
 const hljs = require("highlight.js");
 const fs = require("fs");
 const path = require("path");
-
-//import FileLoader.js
 const FileLoader = require("./lib/FileLoader.js");
 const loader = new FileLoader();
-
 const scssFiles = [];
 const articles = [];
 const allSections = [];
@@ -105,7 +102,7 @@ function renderArticlesToHtml() {
     let sortedArticlesByCat = sortArticlesByCategory(filterArticles);
     let headlineIndex = 0;
     sortedArticlesByCat.forEach((arr) => {
-        articlesAsString += "<h1>" + categories[headlineIndex] + "</h1>";
+        articlesAsString += "<h1 class=\"lsg_category_headline\" id=\"" + categories[headlineIndex] + "\">" + categories[headlineIndex] + "</h1>";
         arr.map((article) => {
             console.log("RENDER ARTICLE: " + article.title);
             let title = "<h1 class=\"lsg_title\" id=\"" + article.title + "\">" + article.title + "</h1>\n";
@@ -115,38 +112,26 @@ function renderArticlesToHtml() {
                 allSections.push(section);
                 let sec = "";
                 //creates a unique id for every code snippet
-                let id = "";
-                let trigger = "#";
-                if (section.description === undefined) {
-                    id = article.title + "_" + Math.round(Math.random() * 10000);  
-                } else {
-                    id = article.title + "_" + section.description;
-                }
-                trigger = trigger + id;
+                //IMPROVE!!!
+                let id = article.title + "_" + Math.round(Math.random() * 10000);  ;
+                let trigger = "#" + id;
                 let example_id = id + "_example";
+
+                let example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
+                let description = "<p>" + section[0].description + "</p>\n";
+                let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
+                let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
+                let mask = hljs.highlight('html', section[0].html).value;
+                let html = "<figure>\n<pre>\n<code  id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
                 if (article.downside === true) {
                     sec = "<section class=\"lsg_section-ds\"><div>\n";
-                    let example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
-                    let description = "<p>" + section[0].description + "</p>\n";
-                    let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
-                    let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
-                    let mask = hljs.highlight('html', section[0].html).value;
-                    let html = "<figure>\n<pre>\n<code  id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
-    
-                    sec = sec + "<div class=\"lsg_section_header\">" + description + "<div>" + openSectionBtn + copyBtn + "</div></div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
-                    sec = sec + "</div></section>";
+                    sec = sec + "<div class=\"lsg_section__header\">" + description + "<div>" + openSectionBtn + copyBtn + "</div></div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
                 } else {
                     sec = "<section class=\"lsg_section\"><div>\n";
-                    let example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
-                    let description = "<p>" + section[0].description + "</p>\n";
-                    let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
-                    let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
-                    let mask = hljs.highlight('html', section[0].html).value;
-                    let html = "<figure id=\"" + id + "\" >\n<pre>\n<code >\n" + mask + "</code>\n</pre>\n</figure>\n";
-    
-                    sec = sec + "<div class=\"lsg_section_header\">" + description + "<div>" + openSectionBtn + copyBtn + "</div></div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" + html + "</div>\n</div>";
-                    sec = sec + "</div></section>";
+                    sec = sec + "<div class=\"lsg_section__header\">" + description + "<div>" + openSectionBtn + copyBtn + "</div></div>\n<div class=\"lsg_snippet\">" + "<div class=\"lsg_example\">" + example + "</div>\n<div class=\"lsg_snip\">" + html + "</div>\n</div>";
+                    
                 }
+                sec = sec + "</div></section>";
                 artHTMLString = artHTMLString + sec;
             })
             artHTMLString = artHTMLString + "</div>\n</article>";
@@ -179,20 +164,18 @@ function fillTemplateWithHTML(snippets) {
 function createNav() {
     let navString = "";
     let filterArticles = articles.filter((article => article.title !== "Undefined"));
-    let titles_general = filterArticles.filter((article => article.category === "General"));
-    let titles_atom = filterArticles.filter((article => article.category === "Atom"));
-    let titles_molecule = filterArticles.filter((article => article.category === "Molecule"));
-    let titles_organism = filterArticles.filter((article => article.category === "Organism"));
-    navString = createNavSubList(titles_general, "General") + "\n" + 
-                createNavSubList(titles_atom, "Atoms") + "\n" + 
-                createNavSubList(titles_molecule, "Molecules") + "\n" + 
-                createNavSubList(titles_organism, "Organisms") + "\n";
+    let sortedArticlesByCat = sortArticlesByCategory(filterArticles);
+    let categoryIndex = 0;
+    sortedArticlesByCat.forEach((arr) => {
+        navString += createNavSubList(arr, categories[categoryIndex]) + "\n";
+        categoryIndex++;
+    })
 
     return navString;
 }
 
 function createNavSubList(titles, name) {
-    let subList = "<li>" + name + "<ul class=\"lsg_nav_list\">";
+    let subList = "<li class=\"lsg_nav__item\"><a class=\"lsg_link__head\" href=\"#" + name + "\">" + name + "</a><ul class=\"lsg_nav__list\">";
     titles.forEach(article => {
         subList += "<li class=\"lsg_nav__item\"><a class=\"lsg_link\" href=\"#" + article.title + "\">" + article.title + "</a></li>\n";
     });

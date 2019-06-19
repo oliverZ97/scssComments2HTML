@@ -42,6 +42,11 @@ $primary-font: Arial, Helvetica, sans-serif;
   color: $secondary-color;
 }
 
+.lsg_category_headline {
+  color: $secondary-color;
+  font-size: 50px;
+}
+
 .lsg_nav {
   width: 20%;
   display: flex;
@@ -165,7 +170,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   margin-block-start: 0;
 }
 
-.lsg_section_header {
+.lsg_section__header {
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
@@ -257,6 +262,37 @@ $primary-font: Arial, Helvetica, sans-serif;
     color: $primary-color;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  &__head {
+    display: block;
+    color: $text-color-light;
+    font-size: 26px;
+    text-decoration: none;
+    border-left: 3px solid $secondary-color;
+    border-bottom: 3px solid $secondary-color;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 50%;
+    margin-top: 10px;
+
+    &:link {
+      background: linear-gradient(to right, $secondary-color 50%, transparent 50%);
+      background-size: 300% 100%;
+      background-position: right bottom;
+      transition: color 1s ease, background-position 1s ease;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:hover {
+      background-position: left bottom;
+      color: $primary-color;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   }
 }
 
