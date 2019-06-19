@@ -5,10 +5,6 @@ function Lsg_functionality() {
 function setListener() {
     let listener = document.getElementsByClassName('js-tabOpener');
     let listener_arr = Array.from(listener);
-    listener_arr.forEach((elem) => {
-        console.log(elem);
-        //elem.addEventListener('click', getSectionContent(elem), false );
-    })
 }
 
 function getSectionContent(elem) {
