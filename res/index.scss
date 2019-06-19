@@ -280,7 +280,7 @@ $primary-font: Arial, Helvetica, sans-serif;
       background: linear-gradient(to right, $secondary-color 50%, transparent 50%);
       background-size: 300% 100%;
       background-position: right bottom;
-      transition: color 1s ease, background-position 1s ease;
+      transition: color 1s ease, background-position 2s ease;
       padding-left: 5px;
       padding-right: 5px;
       border-top-right-radius: 5px;
