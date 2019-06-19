@@ -113,18 +113,18 @@ function renderArticlesToHtml() {
                 sec = "<section class=\"lsg_section-ds\"><div>\n";
                 let example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
                 let description = "<p>" + section[0].description + "</p>\n";
-                let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy</button>\n";
+                let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
                 let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
                 let mask = hljs.highlight('html', section[0].html).value;
                 let html = "<figure>\n<pre>\n<code  id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
 
-                sec = sec + "<div class=\"lsg_section_header\">" + description + openSectionBtn + copyBtn + "</div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
+                sec = sec + "<div class=\"lsg_section_header\">" + description + "<div>" + openSectionBtn + copyBtn + "</div></div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
                 sec = sec + "</div></section>";
             } else {
                 sec = "<section class=\"lsg_section\"><div>\n";
                 let example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
                 let description = "<p>" + section[0].description + "</p>\n";
-                let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy</button>\n";
+                let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
                 let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
                 let mask = hljs.highlight('html', section[0].html).value;
                 let html = "<figure id=\"" + id + "\" >\n<pre>\n<code >\n" + mask + "</code>\n</pre>\n</figure>\n";
