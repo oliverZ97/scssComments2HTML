@@ -11,6 +11,10 @@ const root = "../scssComments2HTML";
 
 main(process.argv);
 
+//Parameter: Array - an Array of Type String[]
+//Return: 
+//Usage: This is the main-function. Leads all processes. The argv[2] contains the input from 
+//       the Terminal which is called from the prebuild script in the package.json
 function main(argv) {
     let path = argv[2]
     console.log("---------------------");
@@ -18,9 +22,8 @@ function main(argv) {
     let importCSS = getFilesFromDirectory(path);
     extractArticlesFromFiles(scssFiles);
     let sortedArticles = sortArticles();
-    let snippets = renderArticlesToHtml(sortedArticles);
-    let template = fillTemplateWithHTML(snippets);
-
+    let htmlString = renderArticlesToHtml(sortedArticles);
+    let template = fillTemplateWithHTML(htmlString);
     writeSCSSFile(importCSS);
     writeIndexHtml(template);
     console.log("FINISHED! HAVE FUN WITH YOUR STYLEGUIDE :D");
@@ -84,16 +87,23 @@ function sortArticles() {
     })
 }
 
-function sortArticlesByCategory(filterArticles) {
-    let titles_general = filterArticles.filter((article => article.category === "General"));
-    let titles_atom = filterArticles.filter((article => article.category === "Atom"));
-    let titles_molecule = filterArticles.filter((article => article.category === "Molecule"));
-    let titles_organism = filterArticles.filter((article => article.category === "Organism"));
+//Parameter: Array - Needs an Array of Type Article[]
+//Return: Array - An Array of Type Array[]. Each Array contains the articles of a specific category
+//Usage: creates an Array for each category and extract all articles with the specific
+//       category out of the Input Array.
+function sortArticlesByCategory(articles) {
+    let titles_general = articles.filter((article => article.category === "General"));
+    let titles_atom = articles.filter((article => article.category === "Atom"));
+    let titles_molecule = articles.filter((article => article.category === "Molecule"));
+    let titles_organism = articles.filter((article => article.category === "Organism"));
 
     let sortedArticlesByCat = [titles_general, titles_atom, titles_molecule, titles_organism];
     return sortedArticlesByCat;
 }
 
+//Parameter: 
+//Return: String - Returns a String containing all articles and their content formatted in HTML
+//Usage: Render all articlesand their content to one HTML String.
 function renderArticlesToHtml() {
     let articlesAsString = "<div>";
     console.log("START TO RENDER ARTICLES");
@@ -145,7 +155,11 @@ function renderArticlesToHtml() {
     return articlesAsString;
 }
 
-function fillTemplateWithHTML(snippets) {
+//Parameter: String - A String containing HTML
+//Return: String - A String containing HTML
+//Usage: reads a HTML-File called template.html and replaces the placeholders
+//       inside with HTML-Strings.
+function fillTemplateWithHTML(htmlString) {
     console.log("FILL TEMPLATE WITH HTML");
     console.log("---------------------");
     let htmlTemplate = null;
@@ -155,12 +169,15 @@ function fillTemplateWithHTML(snippets) {
         }
     });
     let fileContent = fs.readFileSync(htmlTemplate, 'utf8');
-    let filledTemplateWithSnippets = fileContent.replace("SNIPPET_PLACEHOLDER", snippets);
-    let filledTemplateWithNav = filledTemplateWithSnippets.replace("NAV_PLACEHOLDER", createNav());
+    let filledTemplateWithHTMLString = fileContent.replace("SNIPPET_PLACEHOLDER", htmlString);
+    let filledTemplate = filledTemplateWithHTMLString.replace("NAV_PLACEHOLDER", createNav());
 
-    return filledTemplateWithNav;
+    return filledTemplate;
 }
 
+//Parameter: 
+//Return: String - A String containing HTML
+//Usage: creates a Navigation consisting of <li>- and <ul>-Tags
 function createNav() {
     let navString = "";
     let filterArticles = articles.filter((article => article.title !== "Undefined"));
@@ -174,6 +191,9 @@ function createNav() {
     return navString;
 }
 
+//Parameter: Array - an Array of Type Article[], String - a String containing the title of the sublist
+//Return: String - A String containing HTML
+//Usage: creates a String of an unordered List containing the titles of each article inside the Array
 function createNavSubList(titles, name) {
     let subList = "<li class=\"lsg_nav__item\"><a class=\"lsg_link__head\" href=\"#" + name + "\">" + name + "</a><ul class=\"lsg_nav__list\">";
     titles.forEach(article => {
@@ -183,12 +203,19 @@ function createNavSubList(titles, name) {
     return subList;
 }
 
+//Parameter: String - A String containing HTML
+//Return:
+//Usage: writes a File called index.html in the /res-Folder. The File contains an HTML-String
 function writeIndexHtml(htmlContent) {
     fs.writeFileSync('./res/index.html', htmlContent);
     console.log("WRITE FILE index.html");
     console.log("---------------------");
 }
 
+//Parameter: String - A String containing SCSS import Statements
+//Return:
+//Usage: writes a File called style.js in the /res-Folder. 
+//       This File is used to get all scss-Files inside the bundle.
 function writeSCSSFile(scssContent) {
     fs.writeFileSync('./res/style.js', scssContent);
     console.log("WRITE FILE style.js");

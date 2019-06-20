@@ -31,3 +31,10 @@ You can import the styleguide.min.css file with the link-Tag or you copy it dire
 <img src="https://github.com/oliverZ97/scssComments2HTML/blob/master/assets/readme_1.png" width="375" height="525">
 
 6. Out of all the content the Tool creates a styleguide.min.css and a webpage.min.css, placed in the /docs-Folder. A index.html is also created inside the /docs-Folder. This file contains the Living Styelguide which you can explore in your Browser.
+
+**NEED CHANGES IN THE INDEX.HTML?**
+
+If you need to change something like the design of the highlight.js or something else, you need to change the template.html!
+Also all paths need to be relative to the **index.html in /docs**! Otherwise it will not work.
+
+After you have changed something run the build command to add all changes to the index.html in /docs
