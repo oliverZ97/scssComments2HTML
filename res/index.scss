@@ -1,6 +1,6 @@
 $bg-color: #202020;
 $primary-color: #333333;
-$secondary-color: #2C92B7;
+$secondary-color: #2c92b7;
 $tertiary-color: #232323;
 $text-color-light: #cccccc;
 
@@ -130,8 +130,8 @@ $primary-font: Arial, Helvetica, sans-serif;
     color: $tertiary-color;
     opacity: 1;
     transition-duration: 0.4s;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 }
 
@@ -318,23 +318,11 @@ $primary-font: Arial, Helvetica, sans-serif;
   }
 }
 
-@media screen and (min-width: 769px) {  
-  .lsg_nav {
-    overflow-y: scroll;
-    left: 0;
-    min-width: 210px;
-    width: 15%;
-  }
-
-  .lsg_content {
+@media screen and (min-width: 769px) {
+  .lsg_page {
     width: 80%;
-    margin-right: 20px;
-    margin-left: 230px;
   }
-}
 
-@media screen and (min-width: 1024px) {  
-  
   .lsg_nav {
     overflow-y: auto;
     left: 0;
@@ -351,42 +339,96 @@ $primary-font: Arial, Helvetica, sans-serif;
     margin-top: 2px;
   }
 
-  .lsg_link {
-    font-size: 16px;
-  }
-
   .lsg_content {
     width: 80%;
     margin-right: 20px;
     margin-left: 230px;
   }
+
+  .lsg_snippet {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: auto;
+    height: auto;
+    color: $text-color-light;
+    background-color: $tertiary-color;
+    border-top: 1px solid $secondary-color;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+  }
+
+  .lsg_example {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $secondary-color;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .lsg_snip {
+    width: 100%;
+    border-left: none;
+  }
 }
 
-
-@media screen and (min-width: 1216px) { 
+@media screen and (min-width: 1024px) {
   .lsg_page {
     width: 100%;
   }
-}
 
-
-@media screen and (min-width: 1408px) {
-  .lsg_page {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .lsg_body {
-    font-size: 16px;
+  .lsg_link__head {
+    font-size: 20px;
+    margin-top: 2px;
   }
 
   .lsg_link {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  .lsg_nav {
-    overflow-y: scroll;
-    left: 150px;
+  .lsg_content {
+    width: 75%;
+    margin-right: 2%;
+    margin-left: 230px;
+  }
+
+  .lsg_snippet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 200px;
+    height: auto;
+    color: $text-color-light;
+    background-color: $tertiary-color;
+    border-top: 1px solid $secondary-color;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+  }
+
+  .lsg_example {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border-bottom: none;
+  }
+
+  .lsg_snip {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid $secondary-color;
+    //overflow: scroll;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+
+  .lsg_content {
+    margin-left: 17%;
+    margin-right: auto;
   }
 }
