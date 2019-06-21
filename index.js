@@ -127,7 +127,13 @@ function renderArticlesToHtml() {
                 let trigger = "#" + id;
                 let example_id = id + "_example";
 
-                let example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
+                let example = "";
+                if(article.title !== "Color-Palette") {
+                     example = "<div id=\"" + example_id + "\">" + section[0].example + "</div>";
+                } else {
+                     example = "<div style=\"width:80%; max-width:400px;\" id=\"" + example_id + "\">" + section[0].example + "</div>";
+
+                }
                 let description = "<p>" + section[0].description + "</p>\n";
                 let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
                 let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
@@ -217,7 +223,7 @@ function writeIndexHtml(htmlContent) {
 //Usage: writes a File called style.js in the /res-Folder. 
 //       This File is used to get all scss-Files inside the bundle.
 function writeSCSSFile(scssContent) {
-    fs.writeFileSync('./res/style.js', scssContent);
-    console.log("WRITE FILE style.js");
+    fs.writeFileSync('./res/styleguide.js', scssContent);
+    console.log("WRITE FILE styleguide.js");
     console.log("---------------------");
 }

@@ -19,8 +19,8 @@ console.log('im running in DevMode: ' + devMode);
 
 module.exports = {
     entry: {
-        styleguide: './res/style.js',
-        webpage: './res/pagestyle.js',
+        styleguide: './res/styleguide.js',
+        styleguide_app: './res/app.js',
     },
     output: {
         path: path.resolve(__dirname, 'docs'),
