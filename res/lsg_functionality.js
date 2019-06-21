@@ -2,7 +2,7 @@
 //Return: 
 //Usage: reads the dataset.target attribute of the elem, which contains the id of the target.
 //       reads the innerHTML ofnthe target and calls the createWindowWithHTML-function
-function getSectionContent(elem) {
+export function getSectionContent(elem) {
     let example = document.getElementById(elem.dataset.target)
     let htmlToRender = example.innerHTML;
     createWindowWithHTML(htmlToRender);

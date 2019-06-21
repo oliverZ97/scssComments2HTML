@@ -1,9 +1,8 @@
 import '../res/index.scss';
-import '..'
 import hljs from 'highlight.js';
 import 'highlight.js/styles/a11y-dark.css';
-import 'clipboard';
-import './lsg_functionality.js';
+import ClipboardJS from 'clipboard';
+import {getSectionContent} from '../res/lsg_functionality';
 
 hljs.initHighlightingOnLoad();
 
@@ -25,3 +24,5 @@ if(window.attachEvent) {
         window.onload = startClipboard;
     }
  }
+
+ window.getSectionContent = getSectionContent;
