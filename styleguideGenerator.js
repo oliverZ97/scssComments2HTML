@@ -135,8 +135,8 @@ function renderArticlesToHtml() {
 
                 }
                 let description = "<p>" + section[0].description + "</p>\n";
-                let copyBtn = "<button class=\"clipboard lsg_button\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
-                let openSectionBtn = "<button class=\"lsg_button js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
+                let copyBtn = "<button class=\"clipboard lsg_button lsg_draw-border\" data-clipboard-target=\"" + trigger + "\">copy Snippet</button>\n";
+                let openSectionBtn = "<button class=\"lsg_button lsg_draw-border js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
                 let mask = hljs.highlight('html', section[0].html).value;
                 let html = "<figure>\n<pre>\n<code  id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
                 if (article.downside === true) {
