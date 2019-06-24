@@ -12,7 +12,7 @@ export function getSectionContent(elem) {
 //Return: 
 //Usage: inserts the Parameter inside of a HTML-String and opens the content in a new Tab
 function createWindowWithHTML(sectionContent) {
-    let string = "<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>Team Enterprise Styleguide</title><link rel=\"stylesheet\" type=\"text/css\" href=\"./webpage.min.css\"><link rel=\"stylesheet\" type=\"text/css\" href=\"./styleguide.min.css\"><link rel=\"icon\" type=\"image/svg\" href=\"../logo.jpg\" sizes=\"32x32\"></head><body id=\"lsg_body\">" + sectionContent + "</body></html>";
+    let string = "<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>Team Enterprise Styleguide</title><link rel=\"stylesheet\" type=\"text/css\" href=\"./webpage.min.css\"><link rel=\"stylesheet\" type=\"text/css\" href=\"./styleguide.min.css\"><link rel=\"icon\" type=\"image/svg\" href=\"../logo.jpg\" sizes=\"32x32\"></head><body id=\"lsg_body\" style=\"background-color: #232323\">" + sectionContent + "</body></html>";
     let newWindow = window.open();
     newWindow.document.open();
     newWindow.document.write(string);

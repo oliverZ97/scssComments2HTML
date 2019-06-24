@@ -311,7 +311,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   height: 20px;
   font-family: $primary-font;
   
-  &:focus, &:hover {
+  &:hover {
     background-color: $tertiary-color;
     border: 1px solid $tertiary-color;
     color: $secondary-color;
