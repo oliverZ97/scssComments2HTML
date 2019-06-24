@@ -16,7 +16,7 @@ This Article shows the Hero of a page.
 Molecule
 """
 
-"""downside"""
+"""below"""
 */
 
 .hero {
@@ -57,9 +57,8 @@ Molecule
 
   &__image {
     position: absolute;
-    height: auto;
-    max-width: 100%;
     transform: translate(-50%, -40%);
+    object-fit: cover;
   }
 }
 

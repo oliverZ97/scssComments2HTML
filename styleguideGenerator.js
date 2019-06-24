@@ -139,7 +139,7 @@ function renderArticlesToHtml() {
                 let openSectionBtn = "<button class=\"lsg_button lsg_draw-border js-tabOpener\" data-target=\"" + example_id + "\" onClick=\"getSectionContent(this)\">try MediaQueries</button>\n";
                 let mask = hljs.highlight('html', section[0].html).value;
                 let html = "<figure>\n<pre>\n<code  id=\"" + id + "\" >\n" + mask + "</code>\n</pre>\n</figure>\n";
-                if (article.downside === true) {
+                if (article.below === true) {
                     sec = "<section class=\"lsg_section-ds\"><div>\n";
                     sec = sec + "<div class=\"lsg_section__header\">" + description + "<div>" + openSectionBtn + copyBtn + "</div></div>\n<div class=\"lsg_snippet-ds\">" + "<div class=\"lsg_example-ds\">" + example + "</div>\n<div class=\"lsg_snip-ds\">" + html + "</div>\n</div>";
                 } else {
