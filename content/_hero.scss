@@ -32,14 +32,14 @@ Molecule
     example: >
       <div class="lsg_hero">
         <div class="hero">
-            <img class="hero__img" src="../res/example.jpg">
+            <img class="hero__image" src="../res/example.jpg">
             <p class="hero__text">This Headline is a primary Headline.</p>
         </div>
       </div>
 
     html: >
         <div class="hero">
-            <img class="hero__img" src="../res/example.jpg">
+            <img class="hero__image" src="../res/example.jpg">
             <p class="hero__text">This Headline is a primary Headline.</p>
         </div>
     ---
@@ -51,7 +51,7 @@ Molecule
   height: 300px;
 
   &__text {
-    width: 100%;
+    //width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     font-family: $font-secondary;
@@ -64,9 +64,10 @@ Molecule
   }
 
   &__image {
-    position: absolute;
-    height: auto;
-    max-width: 100%;
+    //position: absolute;
+    //max-height: 600px;
+    //width: 100%;
+    overflow: hidden;
     transform: translate(-50%, -40%);
   }
 }
