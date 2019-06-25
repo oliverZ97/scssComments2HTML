@@ -6,7 +6,7 @@ const loader = new FileLoader();
 const scssFiles = [];
 const articles = [];
 const allSections = [];
-const categories = ["General", "Atoms", "Molecules", "Organisms"];
+const categories = ["Intro", "General", "Atoms", "Molecules", "Organisms"];
 const root = "../scssComments2HTML";
 
 main(process.argv);
