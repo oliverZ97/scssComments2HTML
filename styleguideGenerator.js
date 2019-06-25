@@ -6,7 +6,7 @@ const loader = new FileLoader();
 const scssFiles = [];
 const articles = [];
 const allSections = [];
-const categories = ["Intro", "General", "Atoms", "Molecules", "Organisms"];
+const categories = ["General", "Atoms", "Molecules", "Organisms"];
 const root = "../scssComments2HTML";
 
 main(process.argv);
@@ -189,6 +189,7 @@ function createNav() {
     let filterArticles = articles.filter((article => article.title !== "Undefined"));
     let sortedArticlesByCat = sortArticlesByCategory(filterArticles);
     let categoryIndex = 0;
+    navString += "<li class=\"lsg_nav__item\"><a class=\"lsg_link__head\" href=\"#Intro\">Intro</a></li>";
     sortedArticlesByCat.forEach((arr) => {
         navString += createNavSubList(arr, categories[categoryIndex]) + "\n";
         categoryIndex++;
