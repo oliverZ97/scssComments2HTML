@@ -14,6 +14,11 @@ Atom
 """
 
 */
+
+.lsg_container {
+    background-color: $text-color--dark;
+}
+
 .light-container {
     background-color: #cccccc;
     border-radius: 5px;
@@ -30,10 +35,15 @@ Atom
     ---
     description: Primary Text Light
     example: >
-            <p class="text__primary text--light">This Text is a primary Text.</p>
-
+        <div>
+            <p class="text__primary text--dark">This Text is a primary Text.</p>
+            <div class="lsg_container"><p class="text__primary text--light">This Text is a primary Text.</p></div>
+        </div>
     html: >
+        <div>
+            <p class="text__primary text--dark">This Text is a primary Text.</p>
             <p class="text__primary text--light">This Text is a primary Text.</p>
+        </div>
     ---
 
     */
@@ -47,10 +57,16 @@ Atom
     ---
     description: Secondary Text Light
     example: >
-            <p class="text__secondary text--light">This Text is a secondary Text.</p>
+        <div>
+            <p class="text__secondary text--dark">This Text is a secondary Text.</p>
+            <div class="lsg_container"><p class="text__secondary text--light">This Text is a secondary Text.</p></div>
+        </div>
 
     html: >
-            <p class="text__secondary text--light">This Text is a secondary Text.</p>
+        <div>
+            <p class="text__secondary text--dark">This Text is a secondary Text.</p>
+            <p class="text__secondary text--light">This Text is a secondary Text.</p> 
+        </div>
     ---
 
     */
@@ -64,10 +80,15 @@ Atom
     ---
     description: Special Text Light
     example: >
-            <p class="text__special text--light">This Text is a special Text.</p>
-
+        <div>
+            <p class="text__special text--dark">This Text is a special Text.</p>
+            <div class="lsg_container"><p class="text__special text--light">This Text is a special Text.</p></div>
+        </div>
     html: >
-            <p class="text__special text--light">This Text is a special Text.</p>
+        <div>
+            <p class="text__special text--dark">This Text is a special Text.</p>    
+            <p class="text__special text--light">This Text is a special Text.</p>  
+        </div>
     ---
 
     */
@@ -81,5 +102,10 @@ Atom
     &--light {
         @extend .text;
         color: $text-color;
+    }
+
+    &--dark {
+        @extend .text;
+        color: $text-color--dark;
     }
 }

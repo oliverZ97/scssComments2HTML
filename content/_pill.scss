@@ -52,7 +52,7 @@ example: >
     <button class="pill__secondary"></button>
 
 html: >
-        <button class="pill__secondary"></button>
+    <button class="pill__secondary"></button>
 ---
 */
   &__secondary {
@@ -70,22 +70,75 @@ html: >
 
   /*
 ---
-description:  Icon Pill 
+description:  Icon Pill Small
 example: >
-    <button class="pill__primary pill--favorite-l"></button>
+  <div>
     <button class="pill__secondary pill--favorite"></button>
-
+    <button class="pill__secondary pill--searches"></button>
+    <button class="pill__secondary pill--logout"></button>
+    <button class="pill__secondary pill--displayTile"></button>
+    <button class="pill__secondary pill--displayList"></button>
+    <button class="pill__secondary pill--back"></button>
+    <button class="pill__secondary pill--delete"></button>
+    <button class="pill__secondary pill--filter"></button>
+    <button class="pill__secondary pill--update"></button>
+    <button class="pill__secondary pill--save"></button>
+  </div>
 html: >
-        <button class="pill__primary pill--favorite-l"></button>
-        <button class="pill__secondary pill--favorite"></button>
+  <div>
+    <button class="pill__secondary pill--favorite"></button>
+    <button class="pill__secondary pill--searches"></button>
+    <button class="pill__secondary pill--logout"></button>
+    <button class="pill__secondary pill--displayTile"></button>
+    <button class="pill__secondary pill--displayList"></button>
+    <button class="pill__secondary pill--back"></button>
+    <button class="pill__secondary pill--delete"></button>
+    <button class="pill__secondary pill--filter"></button>
+    <button class="pill__secondary pill--update"></button>
+    <button class="pill__secondary pill--save"></button>
+  </div>
 ---
 */
+
+  /*
+---
+description:  Icon Pill Large
+example: >
+  <div>
+    <button class="pill__primary pill--favorite-large"></button>
+    <button class="pill__primary pill--searches-large"></button>
+    <button class="pill__primary pill--logout-large"></button>
+    <button class="pill__primary pill--displayTile-large"></button>
+    <button class="pill__primary pill--displayList-large"></button>
+    <button class="pill__primary pill--back-large"></button>
+    <button class="pill__primary pill--delete-large"></button>
+    <button class="pill__primary pill--filter-large"></button>
+    <button class="pill__primary pill--update-large"></button>
+    <button class="pill__primary pill--save-large"></button>
+  </div>
+html: >
+  <div>
+    <button class="pill__primary pill--favorite-large"></button>
+    <button class="pill__primary pill--searches-large"></button>
+    <button class="pill__primary pill--logout-large"></button>
+    <button class="pill__primary pill--displayTile-large"></button>
+    <button class="pill__primary pill--displayList-large"></button>
+    <button class="pill__primary pill--back-large"></button>
+    <button class="pill__primary pill--delete-large"></button>
+    <button class="pill__primary pill--filter-large"></button>
+    <button class="pill__primary pill--update-large"></button>
+    <button class="pill__primary pill--save-large"></button>
+  </div>
+---
+*/
+
+
   &--favorite {
     background: $pill-col-bg url("./assets/noun_Star_750828.png");
     background-size: 40px 40px;
   }
 
-  &--favorite-l {
+  &--favorite-large {
     background: $pill-col-bg url("./assets/noun_Star_750828.png") no-repeat center;
     background-size: 50px 50px;
   }
@@ -95,9 +148,19 @@ html: >
     background-size: 40px 40px;
   }
 
+  &--searches-large {
+    background: $pill-col-bg url("./assets/noun_diskette_1939628.png");
+    background-size: 50px 50px;
+  }
+
   &--logout {
     background: $pill-col-bg url("./assets/noun_logout_1350695.png");
     background-size: 40px 40px;
+  }
+
+  &--logout-large {
+    background: $pill-col-bg url("./assets/noun_logout_1350695.png");
+    background-size: 50px 50px;
   }
 
   &--displayTile {
@@ -105,9 +168,19 @@ html: >
     background-size: 40px 40px;
   }
 
+  &--displayTile-large {
+    background: $pill-col-bg url("./assets/noun_tiles_777826.png") no-repeat center;
+    background-size: 50px 50px;
+  }
+
   &--displayList {
     background: $pill-col-bg url("./assets/noun_List_433943.png") no-repeat center;
     background-size: 40px 40px;
+  }
+
+  &--displayList-large {
+    background: $pill-col-bg url("./assets/noun_List_433943.png") no-repeat center;
+    background-size: 50px 50px;
   }
 
   &--back {
@@ -115,22 +188,47 @@ html: >
     background-size: 40px 40px;
   }
 
+  &--back-large {
+    background: $pill-col-bg url("./assets/noun_Arrow_8603.png") no-repeat center;
+    background-size: 50px 50px;
+  }
+
   &--delete {
+    background: $pill-col-bg url("./assets/noun_abort_1258168.png") no-repeat center;
+    background-size: 40px 40px;
+  }
+
+  &--delete-large {
     background: $pill-col-bg url("./assets/noun_abort_1258168.png") no-repeat center;
     background-size: 50px 50px;
   }
 
   &--filter {
     background: $pill-col-bg url("./assets/noun_filters_220951.png");
+    background-size: 40px 40px;
+  }
+
+  &--filter-large {
+    background: $pill-col-bg url("./assets/noun_filters_220951.png");
     background-size: 50px 50px;
   }
 
   &--update {
     background: $pill-col-bg url("./assets/noun_checkmark_67952.png");
+    background-size: 40px 40px;
+  }
+
+  &--update-large {
+    background: $pill-col-bg url("./assets/noun_checkmark_67952.png");
     background-size: 50px 50px;
   }
 
   &--save {
+    background: $pill-col-bg url("./assets/noun_diskette_1939628.png");
+    background-size: 40px 40px;
+  }
+
+  &--save-large {
     background: $pill-col-bg url("./assets/noun_diskette_1939628.png");
     background-size: 50px 50px;
   }

@@ -8,7 +8,7 @@ This Article shows the layout of the Login Form
 """
 
 """category
-Organism
+Molecule
 """
 
 */
@@ -25,9 +25,9 @@ Organism
                 <input class="text text__secondary text--dark form__input" type="password" placeholder="Password" minLength="6" name="password"></input>
             </div>
             <div class="container-column container-column--center">
-                <button class="btn btn__primary text text__primary text--light" type="submit">Login</button>
+                <button class="btn btn__primary text text__primary text--dark" type="submit">Login</button>
             </div>
-            <p class="text text__primary text--light">Oops! Please check your Login Data.</p>
+            <p class="text text__primary text--dark">Oops! Please check your Login Data.</p>
         </form>
 
     html: >
@@ -39,9 +39,9 @@ Organism
                 <input class="text text__secondary text--dark form__input" type="password" placeholder="Password" minLength="6" name="password"></input>
             </div>
             <div class="container-column container-column--center">
-                <button class="btn btn__primary text text__primary text--light" type="submit">Login</button>
+                <button class="btn btn__primary text text__primary text--dark" type="submit">Login</button>
             </div>
-            <p class="text text__primary text--light">Oops! Please check your Login Data.</p>
+            <p class="text text__primary text--dark">Oops! Please check your Login Data.</p>
         </form>
         
     ---

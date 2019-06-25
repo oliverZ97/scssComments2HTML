@@ -41,7 +41,7 @@ General
     description: Primary Font
     example: >
         <div>
-            <p class="text-primary text--light primary-font">This is the primary Font.</p>
+            <p class="text-primary primary-font">This is the primary Font.</p>
         </div>
 
     html: >
@@ -53,7 +53,7 @@ General
 .primary-font {
     font-family: $font-primary;
     font-size: 18px;
-    color: $text-color;
+    color: $text-color--dark;
 }
 
 /*
@@ -73,7 +73,7 @@ General
 .secondary-font {
     font-family: $font-secondary;
     font-size: 18px;
-    color: $text-color;
+    color: $text-color--dark;
 }
 
 //*************************************************

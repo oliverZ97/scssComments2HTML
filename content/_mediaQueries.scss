@@ -25,7 +25,7 @@ General
     description: Breakpoints with max-width
     example: >
         <div>
-            <p class="text__primary text--light">$mq-mobile: 768px;</p>
+            <p class="text__primary text--dark">$mq-mobile: 768px;</p>
         </div>
 
     html: >
@@ -39,10 +39,10 @@ General
     description: Breakpoints with min-width
     example: >
         <div>
-            <p class="text__primary text--light">$mq-tablet: 769px;</p>
-            <p class="text__primary text--light">$mq-desktop: 1024px;</p>
-            <p class="text__primary text--light">$mq-widescreen: 1216px;</p>
-            <p class="text__primary text--light">$mq-fullhd: 1408px;</p>
+            <p class="text__primary text--dark">$mq-tablet: 769px;</p>
+            <p class="text__primary text--dark">$mq-desktop: 1024px;</p>
+            <p class="text__primary text--dark">$mq-widescreen: 1216px;</p>
+            <p class="text__primary text--dark">$mq-fullhd: 1408px;</p>
         </div>
 
     html: >

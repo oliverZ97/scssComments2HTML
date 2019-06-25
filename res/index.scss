@@ -1,8 +1,8 @@
-$bg-color: #202020;
-$primary-color: #333333;
-$secondary-color: #2c92b7;
-$tertiary-color: #232323;
-$text-color-light: #cccccc;
+$bg-color: #ffffff;
+$primary-color: #ffffff;
+$secondary-color: #ffffff;
+$tertiary-color: #ffffff;
+$text-color: #111111;
 
 $primary-font: Arial, Helvetica, sans-serif;
 
@@ -11,7 +11,7 @@ $primary-font: Arial, Helvetica, sans-serif;
 
 .lsg_body {
   background-color: $bg-color;
-  color: $text-color-light;
+  color: $text-color;
   font-family: $primary-font;
   margin: 0;
   width: 100%;
@@ -29,8 +29,14 @@ $primary-font: Arial, Helvetica, sans-serif;
   justify-content: flex-start;
   padding: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid $secondary-color;
-  border-top: 2px solid $secondary-color;
+  border-bottom: 2px solid $text-color;
+  border-top: 2px solid $text-color;
+}
+
+.lsg_intro_container {
+  padding: 10px;
+  border-bottom: 2px solid $text-color;
+  border-top: 2px solid $text-color;
 }
 
 .lsg_headline {
@@ -39,13 +45,13 @@ $primary-font: Arial, Helvetica, sans-serif;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 20px;
-  color: $secondary-color;
+  color: $text-color;
 }
 
 .lsg_category_headline {
   margin-block-end: 0;
   margin-block-start: 0;
-  color: $secondary-color;
+  color: $text-color;
   font-size: 50px;
 }
 
@@ -57,7 +63,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   width: 15%;
   display: flex;
   flex-direction: column;
-  background-color: $primary-color;
+  background-color: $bg-color;
   overflow-y: scroll;
   //border: 2px solid $secondary-color;
   //border-radius: 5px;
@@ -73,8 +79,7 @@ $primary-font: Arial, Helvetica, sans-serif;
     height: 50px;
     padding-left: 10px;
     font-size: 20px;
-    color: $primary-color;
-    opacity: 0.6;
+    color: $text-color;
     display: flex;
     align-items: center;
   }
@@ -85,10 +90,10 @@ $primary-font: Arial, Helvetica, sans-serif;
     padding-top: 5px;
   }
 
-  &:hover > .lsg_nav__header {
+  /*&:hover > .lsg_nav__header {
     opacity: 1;
     transition-duration: 0.4s;
-  }
+  }*/
 }
 
 .lsg_content {
@@ -98,8 +103,9 @@ $primary-font: Arial, Helvetica, sans-serif;
 }
 
 .lsg_article {
-  //border: 2px solid $secondary-color;
-  border-radius: 5px;
+  //border-bottom: 2px solid $text-color;
+  border-top: 2px solid $text-color;
+  //border-radius: 5px;
   margin-bottom: 50px;
   background-color: $primary-color;
 
@@ -108,15 +114,15 @@ $primary-font: Arial, Helvetica, sans-serif;
     background-color: $primary-color;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    color: $secondary-color;
-    border-bottom: 2px solid $secondary-color;
+    color: $text-color;
+    border-bottom: 2px solid $text-color;
 
-    &:hover {
+    /*&:hover {
       background-color: $secondary-color;
-      color: $tertiary-color;
+      color: $primary-color;
       opacity: 1;
       transition-duration: 0.4s;
-    }
+    }*/
   }
 
   &__sections {
@@ -125,50 +131,48 @@ $primary-font: Arial, Helvetica, sans-serif;
     margin-right: auto;
   }
 
-  &:hover > .lsg_article__header {
+  /*&:hover > .lsg_article__header {
     background-color: $secondary-color;
-    color: $tertiary-color;
+    color: $primary-color;
     opacity: 1;
     transition-duration: 0.4s;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-  }
+  }*/
 }
 
 .lsg_section {
   padding-left: auto;
   padding-right: auto;
   margin-top: 30px;
-  border: 1px solid $secondary-color;
+  border: 1px solid $text-color;
   border-radius: 5px;
   width: 100%;
   height: auto;
-  opacity: 0.6;
 
-  &:hover {
+  /*&:hover {
     background-color: $secondary-color;
     color: $primary-color;
     opacity: 1;
     transition-duration: 0.4s;
-  }
+  }*/
 }
 
 .lsg_section-ds {
   padding-left: auto;
   padding-right: auto;
   margin-top: 30px;
-  border: 1px solid $secondary-color;
+  border: 1px solid $text-color;
   border-radius: 5px;
   width: 100%;
   height: auto;
-  opacity: 0.6;
 
-  &:hover {
+  /*&:hover {
     background-color: $secondary-color;
     color: $primary-color;
     opacity: 1;
     transition-duration: 0.4s;
-  }
+  }*/
 }
 
 .lsg_title {
@@ -192,9 +196,9 @@ $primary-font: Arial, Helvetica, sans-serif;
   align-items: center;
   min-height: 200px;
   height: auto;
-  color: $text-color-light;
+  color: $text-color;
   background-color: $tertiary-color;
-  border-top: 1px solid $secondary-color;
+  border-top: 1px solid $text-color;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 5px;
@@ -206,9 +210,9 @@ $primary-font: Arial, Helvetica, sans-serif;
   justify-content: stretch;
   width: auto;
   height: auto;
-  color: $text-color-light;
+  color: $text-color;
   background-color: $tertiary-color;
-  border-top: 1px solid $secondary-color;
+  border-top: 1px solid $text-color;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 5px;
@@ -224,7 +228,7 @@ $primary-font: Arial, Helvetica, sans-serif;
 
 .lsg_example-ds {
   padding-bottom: 5px;
-  border-bottom: 1px solid $secondary-color;
+  border-bottom: 1px solid $text-color;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -233,7 +237,7 @@ $primary-font: Arial, Helvetica, sans-serif;
 .lsg_snip {
   width: 50%;
   height: 100%;
-  border-left: 1px solid $secondary-color;
+  border-left: 1px solid $text-color;
   //overflow: scroll;
 }
 
@@ -244,16 +248,16 @@ $primary-font: Arial, Helvetica, sans-serif;
 
 .lsg_link {
   display: block;
-  color: $text-color-light;
+  color: $text-color;
   font-size: 16px;
   text-decoration: none;
-  border-left: 3px solid $secondary-color;
+  border-left: 3px solid $text-color;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 50%;
 
   &:link {
-    background: linear-gradient(to right, $secondary-color 50%, transparent 50%);
+    background: linear-gradient(to right, $text-color 50%, transparent 50%);
     background-size: 300% 100%;
     background-position: right bottom;
     transition: color 1s ease, background-position 1s ease;
@@ -272,18 +276,18 @@ $primary-font: Arial, Helvetica, sans-serif;
 
   &__head {
     display: block;
-    color: $text-color-light;
+    color: $text-color;
     font-size: 26px;
     text-decoration: none;
-    border-left: 3px solid $secondary-color;
-    border-bottom: 3px solid $secondary-color;
+    border-left: 3px solid $text-color;
+    border-bottom: 3px solid $text-color;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     width: 50%;
     margin-top: 10px;
 
     &:link {
-      background: linear-gradient(to right, $secondary-color 50%, transparent 50%);
+      background: linear-gradient(to right, $text-color 50%, transparent 50%);
       background-size: 300% 100%;
       background-position: right bottom;
       transition: color 1s ease, background-position 2s ease;
@@ -303,18 +307,18 @@ $primary-font: Arial, Helvetica, sans-serif;
 }
 
 .lsg_button {
-  background-color: $text-color-light;
-  border: 1px solid $tertiary-color;
-  color: $tertiary-color;
+  background-color: $tertiary-color;
+  border: 1px solid $text-color;
+  color: $text-color;
   border-radius: 5px;
   min-width: 50px;
   height: 20px;
   font-family: $primary-font;
-  
+
   &:hover {
-    background-color: $tertiary-color;
-    border: 1px solid $tertiary-color;
-    color: $secondary-color;
+    background-color: $text-color;
+    border: 1px solid $text-color;
+    color: $tertiary-color;
   }
 }
 
@@ -351,9 +355,9 @@ $primary-font: Arial, Helvetica, sans-serif;
     justify-content: stretch;
     width: auto;
     height: auto;
-    color: $text-color-light;
+    color: $text-color;
     background-color: $tertiary-color;
-    border-top: 1px solid $secondary-color;
+    border-top: 1px solid $text-color;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 5px;
@@ -400,9 +404,9 @@ $primary-font: Arial, Helvetica, sans-serif;
     align-items: center;
     min-height: 200px;
     height: auto;
-    color: $text-color-light;
+    color: $text-color;
     background-color: $tertiary-color;
-    border-top: 1px solid $secondary-color;
+    border-top: 1px solid $text-color;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 5px;
@@ -420,7 +424,7 @@ $primary-font: Arial, Helvetica, sans-serif;
   .lsg_snip {
     width: 50%;
     height: 100%;
-    border-left: 1px solid $secondary-color;
+    border-left: 1px solid $text-color;
     //overflow: scroll;
   }
 }

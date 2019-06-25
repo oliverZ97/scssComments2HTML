@@ -27,12 +27,14 @@ Atom
 
   /*
     ---
-    description: Primary Headline Light
+    description: Primary Headline
     example: >
-            <p class="headline__primary headline--light">This Headline is a primary Headline.</p>
+            <p class="headline__primary headline--dark">This Headline is a primary Headline.</p>
+            <div class="lsg_container"><p class="headline__primary headline--light">This Headline is a primary Headline.</p></div>
   
 
     html: >
+            <p class="headline__primary headline--dark">This Headline is a primary Headline.</p>
             <p class="headline__primary headline--light">This Headline is a primary Headline.</p>
     ---
 
@@ -44,11 +46,12 @@ Atom
   }
   /*
     ---
-    description: Secondary Headline Light
+    description: Secondary Headline
     example: >
-            <p class="headline__secondary headline--light">This Headline is a secondary Headline.</p>
-
+            <p class="headline__secondary headline--dark">This Headline is a secondary Headline.</p>
+            <div class="lsg_container"><p class="headline__secondary headline--light">This Headline is a secondary Headline.</p></div>
     html: >
+            <p class="headline__secondary headline--dark">This Headline is a secondary Headline.</p>
             <p class="headline__secondary headline--light">This Headline is a secondary Headline.</p>
     ---
 
@@ -61,11 +64,12 @@ Atom
 
   /*
     ---
-    description: Tertiary Headline Light
+    description: Tertiary Headline
     example: >
-            <p class="headline__tertiary headline--light">This Headline is a tertiary Headline.</p>
-
+            <p class="headline__tertiary headline--dark">This Headline is a tertiary Headline.</p>
+            <div class="lsg_container"><p class="headline__tertiary headline--light">This Headline is a tertiary Headline.</p></div>
     html: >
+            <p class="headline__tertiary headline--dark">This Headline is a tertiary Headline.</p>
             <p class="headline__tertiary headline--light">This Headline is a tertiary Headline.</p>
     ---
 
@@ -77,11 +81,13 @@ Atom
 
   /*
     ---
-    description: Special Primary Headline Light
+    description: Special Primary Headline
     example: >
-            <p class="headline__special headline--light">This Headline is a special Headline.</p>
+            <p class="headline__special headline--dark">This Headline is a special Headline.</p>
+            <div class="lsg_container"><p class="headline__special headline--light">This Headline is a special Headline.</p></div>
 
     html: >
+            <p class="headline__special headline--dark">This Headline is a special Headline.</p>
             <p class="headline__special headline--light">This Headline is a special Headline.</p>
     ---
 
@@ -96,5 +102,9 @@ Atom
 
   &--light {
     color: $text-color;
+  }
+
+  &--dark {
+    color: $text-color--dark;
   }
 }
